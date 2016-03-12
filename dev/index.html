@@ -3,61 +3,199 @@
 <head>
 	<meta charset="utf-8">
 
-	<title></title>
+	<title>SketchKeys</title>
 	<meta name="viewport" content="width=device-width, shrink-to-fit=no">
 
 	<link rel="stylesheet" href="main.css">
-
-	<script>
-		(function() {
-			var ajax = new XMLHttpRequest();
-			ajax.open('GET', 'img/sprite.svg', true);
-			ajax.send();
-			ajax.onload = function(e) {
-				var div = document.createElement('div');
-				div.style.height = 0;
-				div.innerHTML = ajax.responseText;
-				document.body.insertBefore(div, document.body.childNodes[0]);
-			};
-		})();
-	</script>
-
 </head>
 <body>
 
-<div class="wrapper">
+<svg style="position: absolute; width: 0; height: 0; visibility: hidden;">
+	<symbol viewBox="0 0 31 27" id="icon-twitter__arrow">
+		<title>twitter__arrow</title>
+		<path d="M0 13.54c0 .652.53 1.18 1.18 1.18h25.416L16.333 24.986a1.18 1.18 0 1 0 1.665 1.668l12.335-12.335a1.18 1.18 0 0 0 0-1.668L18 .318a1.18 1.18 0 1 0-1.667 1.668L26.707 12.36H1.18c-.65 0-1.18.53-1.18 1.18z" fill="currentColor"
+		fill-rule="evenodd" />
+	</symbol>
+	<symbol viewBox="0 0 47 38" id="icon-twitter__logo">
+		<title>twitter__logo</title>
+		<path d="M46.54 4.433a18.902 18.902 0 0 1-5.43 1.488A9.482 9.482 0 0 0 45.265.69a18.932 18.932 0 0 1-6.003 2.295A9.442 9.442 0 0 0 32.363 0c-5.22 0-9.454 4.233-9.454 9.453 0 .74.083 1.463.244 2.155C15.297 11.213 8.33 7.45 3.67 1.73a9.41 9.41 0 0 0-1.28 4.753 9.45 9.45 0 0 0 4.204 7.868 9.416 9.416 0 0 1-4.282-1.18v.118c0 4.58 3.258 8.4 7.583 9.27a9.466 9.466 0 0 1-4.27.16 9.463 9.463 0 0 0 8.832 6.567 18.968 18.968 0 0 1-11.74 4.046A19.23 19.23 0 0 1 .46 33.2a26.758 26.758 0 0 0 14.492 4.247c17.39 0 26.897-14.405 26.897-26.898 0-.41-.01-.818-.028-1.223a19.214 19.214 0 0 0 4.717-4.894"
+		fill="currentColor" fill-rule="evenodd" />
+	</symbol>
+</svg>
 
-	<header class="header">
+<header class="masthead">
+	<div class="inner">
+		<p class="masthead__logo logo">
+			<strong>
+				<img class="logo__image" src="img/logo.svg" alt="SketchKeys">
+			</strong>
+		</p>
 
-		<h1 class="logo"><a href="" class="logo__link"><img src="img/logo.png" alt=""></a></h1>
+		<h1 class="masthead__slogan">Accelerate your design workflow</h1>
 
+		<p class="masthead__subslogan">Learn Sketch shortkeys easily with beautiful keyboard stickers.</p>
 
+		<p class="masthead__action-wrapper">
+			<a class="masthead__action" href="#buy">Buy Now</a>
+		</p>
 
-	</header><!-- .header -->
+		<p class="masthead__keyboard-wrapper">
+			<img class="masthead__keyboard" src="img/keyboard.png" alt="Keyboard with SketchKey stickers">
+		</p>
+	</div>
+</header><!-- .masthead -->
 
-	<div class="middle">
+<div class="inner">
+	<section class="features">
+		<h2 class="features__title">The next best thing for your design workflow after ditching Photoshop</h2>
 
-		<div class="main">
+		<ul class="features__list">
+			<li class="features__item features__item--accelerate">
+				<h3 class="features__feature-name">Accelerate your workflow</h3>
 
+				<p class="features__description">Using keyboard shortcuts is going to make the implementation of your designs more efficient. Spend your saved time to research, exploration or a coffee.</p>
+			</li>
 
+			<li class="features__item features__item--discover">
+				<h3 class="features__feature-name">Discover new possibilities</h3>
 
-		</div><!-- .main -->
+				<p class="features__description">While using SketchKeys and following @sketchkeys on Twitter you’ll find new features, tips and tricks for using Sketch.</p>
+			</li>
 
-		<aside class="aside">
+			<li class="features__item features__item--improve">
+				<h3 class="features__feature-name">Improve workspace ergonomics</h3>
 
+				<p class="features__description">Using keyboard shortcuts gives you an alternative to a mouse, overusing of which can lead to discomfort, pain and health disorders.</p>
+			</li>
+		</ul>
 
+		<p class="twitter-wrapper">
+			<a class="twitter" href="https://twitter.com/sketchkeys">
+				<svg class="twitter__logo" width="47" height="38"><use xlink:href="#icon-twitter__logo" /></svg>
 
-		</aside><!-- .aside -->
+				<strong class="twitter__handle">@sketchkeys</strong>
 
-	</div><!-- .middle -->
+				<small class="twitter__description">Learn additional Sketch workflow tips</small>
 
-</div><!-- .wrapper -->
+				<svg class="twitter__arrow" width="31" height="27"><use xlink:href="#icon-twitter__arrow" /></svg>
+			</a>
+		</p>
+	</section>
 
-<footer class="footer">
+	<div class="photos-and-buy">
+		<section class="photos">
+			<!-- <div style="background: #ccc; /*padding-top: 75%;*/ position: relative; width: 790px; height: 600px;">
+				<span style="position: absolute; top: 49%; left: 0; width: 100%; text-align: center; display: block;">Photos</span>
+			</div> -->
+			Photos
+		</section>
 
+		<section class="buy" id="buy">
+			<p class="buy__price-wrapper">
+				<strong class="buy__price">$11.00</strong>
+			</p>
 
+			<p class="buy__shipping">Free worldwide shipping</p>
 
-</footer><!-- .footer -->
+			<div class="buy__shopify">
+				<!-- <div data-embed_type="product" data-shop="sketchkeys.myshopify.com" data-product_name="Sketch Shortcuts Stickers" data-product_handle="sketch-shortcuts-stickers" data-has_image="false" data-display_size="compact" data-redirect_to="checkout" data-buy_button_text="Buy now" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="ff4324" data-button_text_color="ffffff" data-background_color="ecf0f1" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>
+				<script type="text/javascript">
+				document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
+				</script>
+				<noscript><a href="https://sketchkeys.myshopify.com/cart/16564191361:1" target="_blank">Buy Sketch Shortcuts Stickers</a></noscript> -->
+
+				<div data-embed_type="product" data-shop="sketchkeys.myshopify.com" data-product_name="Sketch Shortcuts Stickers" data-product_handle="sketch-shortcuts-stickers" data-has_image="false" data-display_size="compact" data-redirect_to="cart" data-buy_button_text="Add to cart" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="ff4324" data-button_text_color="ffffff" data-background_color="ecf0f1" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>
+				<script type="text/javascript">
+				document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
+				</script>
+				<noscript><a href="https://sketchkeys.myshopify.com/cart/16564191361:1" target="_blank">Buy Sketch Shortcuts Stickers</a></noscript>
+			</div>
+
+			<p class="buy__security">Payments are processed via secure Shopify server</p>
+
+			<ul class="buy-features">
+				<li class="buy-features__feature buy-features__feature--gift">
+					<h3 class="buy-features__name">Gift option</h3>
+
+					<p class="buy-features__description">SketchKeys is a great gift for designer. That’s why we have a limited edition wrapped with a beautiful <a class="buy-features__link" href="">Wrap Paper</a>.</p>
+				</li>
+
+				<li class="buy-features__feature buy-features__feature--produced">
+					<h3 class="buy-features__name">Produced locally</h3>
+
+					<p class="buy-features__description">The product is produced in my hometown Minsk (Belarus) in a small privately held printing house using high quality materials.</p>
+				</li>
+			</ul>
+		</section>
+	</div>
+
+	<section class="faq">
+		<h2 class="faq__title">FAQ</h2>
+
+		<div class="faq__columns">
+			<div class="faq__column">
+				<ul class="faq__list">
+					<li class="faq__item">
+						<h3 class="faq__question">Who created SketchKeys?</h3>
+
+						<p class="faq__answer">We’re working hard to make sure it won’t happen but if you don’t like the product you can get a refund during 30 days since the shipping date.</p>
+					</li>
+
+					<li class="faq__item">
+						<h3 class="faq__question">How long the shipping takes?</h3>
+
+						<p class="faq__answer">We’re working hard to make sure it won’t happen but if you don’t like the product you can get a refund during 30 days since the shipping date.</p>
+					</li>
+
+					<li class="faq__item is-expanded">
+						<h3 class="faq__question">Is peeling off the stickers going to damage my keyboard?</h3>
+
+						<p class="faq__answer">We’re working hard to make sure it won’t happen but if you don’t like the product you can get a refund during 30 days since the shipping date.</p>
+					</li>
+
+					<li class="faq__item">
+						<h3 class="faq__question">What if I don’t like the product?</h3>
+
+						<p class="faq__answer">We’re working hard to make sure it won’t happen but if you don’t like the product you can get a refund during 30 days since the shipping date.</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="faq__column">
+				<ul class="faq__list">
+					<li class="faq__item">
+						<h3 class="faq__question">I’m colorblind and I want to use your product.</h3>
+
+						<p class="faq__answer">We’re working hard to make sure it won’t happen but if you don’t like the product you can get a refund during 30 days since the shipping date.</p>
+					</li>
+
+					<li class="faq__item">
+						<h3 class="faq__question">What if Sketch creators are going to change the shortcuts?</h3>
+
+						<p class="faq__answer">We’re working hard to make sure it won’t happen but if you don’t like the product you can get a refund during 30 days since the shipping date.</p>
+					</li>
+
+					<li class="faq__item">
+						<h3 class="faq__question">I like the stickers but I’d love to get it for other software besides Sketch.</h3>
+
+						<p class="faq__answer">We’re working hard to make sure it won’t happen but if you don’t like the product you can get a refund during 30 days since the shipping date.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<p class="copyright">All rights reserved © SketchKeys</p>
+
+		<a class="footer__link" href="https://twitter.com/sketchkeys">
+			<svg class="footer__link-icon" width="25" height="20"><use xlink:href="#icon-twitter__logo" /></svg>
+			@sketchkeys
+		</a>
+
+		<a class="footer__link" href="mailto:hvoostik@gmail.com">Contact</a>
+	</footer><!-- .footer -->
+</div>
 
 <!-- <script src="js/libs.js"></script>
 <script src="js/scripts.js"></script> -->

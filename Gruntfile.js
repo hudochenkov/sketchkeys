@@ -183,7 +183,7 @@ module.exports = function(grunt) {
 			options: {
 				prefix: 'icon-',
 				svg: {
-					style: 'width: 0; height: 0; visibility: hidden;'
+					style: 'position: absolute; width: 0; height: 0; visibility: hidden;'
 				}
 			},
 			dev: {
