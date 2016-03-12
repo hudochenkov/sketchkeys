@@ -2,7 +2,7 @@
   "name": "sketchkeys",
   "version": "1.0.0",
   "description": "front-end",
-  "repository": "hudochenkov/sketchkeys",
+  "repository": "artiparty/sketchkeys",
   "license": "MIT",
   "private": true,
   "devDependencies": {
