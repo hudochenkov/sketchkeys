@@ -1,0 +1,7 @@
+# Generated stuff
+build
+*.zip
+
+# Dev folder
+node_modules
+_work-files
