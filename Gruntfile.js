@@ -37,6 +37,9 @@ module.exports = function(grunt) {
 					require('postcss-assets')({
 						basePath: 'dev'
 					}),
+					require('postcss-inline-svg')({
+						path: 'dev'
+					}),
 					require('postcss-calc')(),
 					require('postcss-hexrgba')(),
 					require('postcss-custom-media')(),
@@ -137,6 +140,16 @@ module.exports = function(grunt) {
 						dest: '<%= project.js.build %>'
 					}
 				]
+			},
+			other: {
+				files: [
+					{
+						expand: true,
+						cwd: '<%= project.src %>',
+						src: ['CNAME', 'favicon.ico'],
+						dest: '<%= project.build %>'
+					}
+				]
 			}
 		},
 
@@ -157,6 +170,13 @@ module.exports = function(grunt) {
 			default: {
 				src: ['<%= project.js.src %>/scripts.js', 'Gruntfile.js']
 			}
+		},
+
+		'gh-pages': {
+			options: {
+				base: 'build'
+			},
+			src: '**/*'
 		},
 
 		svgstore: {
@@ -182,72 +202,6 @@ module.exports = function(grunt) {
 				files: {
 					'<%= project.img.svgSprite.build %>': ['<%= project.img.src %>/<%= project.img.svgSprite.src %>']
 				}
-			}
-		},
-
-		compress: {
-			all: {
-				options: {
-					archive: '<%= pkg.name %>__markup-all__<%= grunt.template.today("yyyy-mm-dd--HH-MM") %>.zip'
-				},
-				files: [
-					{
-						expand: true,
-						src: [
-							'**/*',
-							'.editorconfig',
-							'.gitignore',
-							'.jscsrc',
-							'!node_modules/**',
-							'!**/_work-files/**',
-							'!*.sublime-*',
-							'!**/*.zip'
-						]
-					}
-				]
-			},
-			markup: {
-				options: {
-					archive: '<%= pkg.name %>__markup-clean__<%= grunt.template.today("yyyy-mm-dd--HH-MM") %>.zip'
-				},
-				files: [
-					{
-						expand: true,
-						cwd: '<%= project.build %>',
-						src: [
-							'**/*'
-						]
-					}
-				]
-			},
-			source: {
-				options: {
-					archive: '<%= pkg.name %>__markup-source__<%= grunt.template.today("yyyy-mm-dd--HH-MM") %>.zip'
-				},
-				files: [
-					{
-						expand: true,
-						src: [
-							'**/*',
-							'.editorconfig',
-							'.gitignore',
-							'.jscsrc',
-							'!<%= project.build %>/**',
-							'!node_modules/**',
-							'!**/_work-files/**',
-							'!*.sublime-*',
-							'!**/*.zip'
-						]
-					}
-				]
-			}
-		},
-
-		'ftp-deploy': {
-			all: {
-				auth: grunt.file.exists(process.env.HOME + '/.grunt-ftp-deploy-config') ? grunt.file.readJSON(process.env.HOME + '/.grunt-ftp-deploy-config') : {},
-				src: '<%= project.build %>',
-				dest: '/show/<%= pkg.name %>'
 			}
 		},
 
@@ -316,21 +270,8 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('default', ['newer:copy', 'svgstore:dev', 'concat:jslibs', 'postcss:default', 'browserSync', 'watch']);
-	// grunt.registerTask('debug', ['sass:debug', 'postcss:debug', 'browserSync', 'watch']);
 	grunt.registerTask('test', ['jscs']);
 	grunt.registerTask('build', ['clean', 'copy', 'svgstore:build', 'concat:jslibs', 'postcss:default', 'postcss:minify', 'usebanner']);
 
-	// Deploy
-	grunt.registerTask('deploy', ['ftp-deploy', 'showURL']);
-
-	grunt.registerTask('showURL', 'Show upload folder URL', function() {
-		var url = 'http://hudochenkov.com/show/' + grunt.config('pkg.name') + '/';
-
-		grunt.log.writeln('URL: ' + url);
-
-		// Copy URL to clipboard
-		var proc = require('child_process').spawn('pbcopy');
-		proc.stdin.write(url);
-		proc.stdin.end();
-	});
+	grunt.registerTask('deploy', ['build', 'gh-pages']);
 };
