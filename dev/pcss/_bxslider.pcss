@@ -12,6 +12,21 @@ $loader:   'images/bx_loader.gif';
 	padding: 0;
 	touch-action: pan-y;
 
+	@media (--not-palm) {
+		/* Fix safari bug. Render issues on left side */
+		&:before {
+			position: absolute;
+			top: 0;
+			left: -1px;
+			z-index: 1000000;
+			display: block;
+			width: 2px;
+			height: 100%;
+			background: #fff;
+			content: "";
+		}
+	}
+
 	img {
 		display: block;
 		max-width: 100%;
