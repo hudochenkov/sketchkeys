@@ -40,7 +40,24 @@
 		</p>
 
 		<p class="masthead__keyboard-wrapper">
-			<img class="masthead__keyboard" src="img/keyboard.png" alt="Keyboard with SketchKey stickers">
+			<img
+				class="masthead__keyboard"
+				src="http://placehold.it/904x250"
+				srcset="
+					http://placehold.it/390x250 390w,
+					http://placehold.it/728x250 728w,
+					http://placehold.it/780x250 780w,
+					http://placehold.it/904x250 904w,
+					http://placehold.it/1456x250 1456w,
+					http://placehold.it/1808x250 1808w
+				"
+				sizes="
+					(max-width: 767px) calc(100vw - 20px),
+					(min-width: 944px) 904px,
+					calc(100vw - 40px)
+				"
+				alt="Keyboard with SketchKey stickers"
+			>
 		</p>
 	</div>
 </header><!-- .masthead -->
@@ -84,10 +101,68 @@
 
 	<div class="photos-and-buy">
 		<section class="photos">
-			<!-- <div style="background: #ccc; /*padding-top: 75%;*/ position: relative; width: 790px; height: 600px;">
-				<span style="position: absolute; top: 49%; left: 0; width: 100%; text-align: center; display: block;">Photos</span>
-			</div> -->
-			Photos
+			<ul class="photos-list">
+				<li class="photos-list__slide">
+					<img
+						class="photos-list__photo"
+						src="img/photos/black-kit.jpg"
+						srcset="
+							img/photos/black-kit.jpg 794w,
+							img/photos/black-kit@2x.jpg 1588w
+						"
+						sizes="
+							(min-width: 768px) 50vw,
+							100vw
+						"
+						alt="Black kit"
+					>
+				</li>
+				<li class="photos-list__slide">
+					<img
+						class="photos-list__photo"
+						src="img/photos/white-kit.jpg"
+						srcset="
+							img/photos/white-kit.jpg 794w,
+							img/photos/white-kit@2x.jpg 1588w
+						"
+						sizes="
+							(min-width: 768px) 50vw,
+							100vw
+						"
+						alt="White kit"
+					>
+				</li>
+				<li class="photos-list__slide">
+					<img
+						class="photos-list__photo"
+						src="img/photos/black-angle.jpg"
+						srcset="
+							img/photos/black-angle.jpg 794w,
+							img/photos/black-angle@2x.jpg 1588w
+						"
+						sizes="
+							(min-width: 768px) 50vw,
+							100vw
+						"
+						alt="Black kit at angle"
+					>
+				</li>
+				<li class="photos-list__slide">
+					<img
+						class="photos-list__photo"
+						src="img/photos/black-overview.jpg"
+						srcset="
+							img/photos/black-overview.jpg 794w,
+							img/photos/black-overview@2x.jpg 1588w
+						"
+						sizes="
+							(min-width: 768px) 50vw,
+							100vw
+						"
+						alt="Black kit overview"
+					>
+				</li>
+			</ul>
 		</section>
 
 		<section class="buy" id="buy">
@@ -98,12 +173,6 @@
 			<p class="buy__shipping">Free worldwide shipping</p>
 
 			<div class="buy__shopify">
-				<!-- <div data-embed_type="product" data-shop="sketchkeys.myshopify.com" data-product_name="Sketch Shortcuts Stickers" data-product_handle="sketch-shortcuts-stickers" data-has_image="false" data-display_size="compact" data-redirect_to="checkout" data-buy_button_text="Buy now" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="ff4324" data-button_text_color="ffffff" data-background_color="ecf0f1" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>
-				<script type="text/javascript">
-				document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
-				</script>
-				<noscript><a href="https://sketchkeys.myshopify.com/cart/16564191361:1" target="_blank">Buy Sketch Shortcuts Stickers</a></noscript> -->
-
 				<div data-embed_type="product" data-shop="sketchkeys.myshopify.com" data-product_name="Sketch Shortcuts Stickers" data-product_handle="sketch-shortcuts-stickers" data-has_image="false" data-display_size="compact" data-redirect_to="cart" data-buy_button_text="Add to cart" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="ff4324" data-button_text_color="ffffff" data-background_color="ecf0f1" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>
 				<script type="text/javascript">
 				document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
@@ -186,19 +255,19 @@
 	</section>
 
 	<footer class="footer">
-		<p class="copyright">All rights reserved © SketchKeys</p>
-
 		<a class="footer__link" href="https://twitter.com/sketchkeys">
 			<svg class="footer__link-icon" width="25" height="20"><use xlink:href="#icon-twitter__logo" /></svg>
 			@sketchkeys
 		</a>
 
 		<a class="footer__link" href="mailto:hvoostik@gmail.com">Contact</a>
+
+		<p class="copyright">All rights reserved © SketchKeys</p>
 	</footer><!-- .footer -->
 </div>
 
-<!-- <script src="js/libs.js"></script>
-<script src="js/scripts.js"></script> -->
+<script src="js/libs.js"></script>
+<script src="js/scripts.js"></script>
 
 </body>
 </html>
