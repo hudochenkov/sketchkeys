@@ -160,6 +160,7 @@ module.exports = function(grunt) {
 			jslibs: {
 				src: [
 					'node_modules/jquery/dist/jquery.min.js',
+					'node_modules/bxslider/dist/jquery.bxslider.min.js',
 					'<%= project.js.src %>/libs/*.js',
 				],
 				dest: '<%= project.js.build %>/libs.js'
