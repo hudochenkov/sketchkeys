@@ -3,13 +3,16 @@ $(document).ready(function() {
 		$(this).parent().toggleClass('is-expanded');
 	});
 
-	$('.photos-list').bxSlider({
+	var slider = $('.photos-list').bxSlider({
 		pager: false,
-		onSliderLoad: function() {
-			// fix showing previous slide on page load
-			this.goToSlide(0);
-		}
+		// onSliderLoad: function() {
+		// 	// fix showing previous slide on page load
+		// 	this.goToSlide(0);
+		// }
 	});
+
+	window.slider = slider;
+
 
 	$('.masthead__action').click(function(e) {
 		var scrollTarget = $(this).attr('href');
