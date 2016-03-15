@@ -3,14 +3,11 @@ $(document).ready(function() {
 		$(this).parent().toggleClass('is-expanded');
 	});
 
-	var slider = $('.photos-list').bxSlider({
+	$('.photos-list').bxSlider({
 		pager: false,
 		infiniteLoop: false,
 		hideControlOnEnd: true
 	});
-
-	window.slider = slider;
-
 
 	$('.masthead__action').click(function(e) {
 		var scrollTarget = $(this).attr('href');
