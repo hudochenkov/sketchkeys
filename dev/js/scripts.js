@@ -4,7 +4,9 @@ $(document).ready(function() {
 	});
 
 	$('.photos-list').bxSlider({
-		pager: false
+		pager: false,
+		infiniteLoop: false,
+		hideControlOnEnd: true
 	});
 
 	$('.masthead__action').click(function(e) {
