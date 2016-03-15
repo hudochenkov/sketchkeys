@@ -4,7 +4,11 @@ $(document).ready(function() {
 	});
 
 	$('.photos-list').bxSlider({
-		pager: false
+		pager: false,
+		onSliderLoad: function() {
+			// fix showing previous slide on page load
+			this.goToSlide(0);
+		}
 	});
 
 	$('.masthead__action').click(function(e) {
