@@ -7,7 +7,9 @@ $(document).ready(function() {
 		pager: false,
 		onSliderLoad: function() {
 			// fix showing previous slide on page load
+			// this.goToSlide(1);
 			// this.goToSlide(0);
+			this.redrawSlider();
 			this.redrawSlider();
 		}
 	});
