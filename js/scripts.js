@@ -5,15 +5,8 @@ $(document).ready(function() {
 
 	var slider = $('.photos-list').bxSlider({
 		pager: false,
-		onSliderLoad: function() {
-			// fix showing previous slide on page load
-			// this.goToSlide(1);
-			// this.goToSlide(0);
-			console.log("a");
-			this.reloadSlider();
-			// this.redrawSlider();
-			console.log("b");
-		}
+		infiniteLoop: false,
+		hideControlOnEnd: true
 	});
 
 	window.slider = slider;
