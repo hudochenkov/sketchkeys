@@ -5,10 +5,11 @@ $(document).ready(function() {
 
 	var slider = $('.photos-list').bxSlider({
 		pager: false,
-		// onSliderLoad: function() {
-		// 	// fix showing previous slide on page load
-		// 	this.goToSlide(0);
-		// }
+		onSliderLoad: function() {
+			// fix showing previous slide on page load
+			// this.goToSlide(0);
+			this.redrawSlider();
+		}
 	});
 
 	window.slider = slider;
