@@ -9,8 +9,10 @@ $(document).ready(function() {
 			// fix showing previous slide on page load
 			// this.goToSlide(1);
 			// this.goToSlide(0);
+			console.log("a");
 			this.redrawSlider();
 			this.redrawSlider();
+			console.log("b");
 		}
 	});
 
