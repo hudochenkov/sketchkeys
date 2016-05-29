@@ -277,7 +277,7 @@ input, select, textarea, button {
 	}
 }
 .photos-and-buy {
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 	padding-bottom: 63px;
 	border-bottom: 2px solid #ecf0f1;
 
@@ -410,12 +410,38 @@ input, select, textarea, button {
 	&__link {
 	}
 }
-.faq {
-	padding-bottom: 42px;
-	border-bottom: 2px solid #ecf0f1;
+.tweets {
+	@media (--smaller-than-lap) {
+		display: none;
+	}
 
-	@media (--palm) {
-		padding-bottom: 14px;
+	&__title {
+		margin-bottom: 29px;
+		font-weight: bold;
+		font-size: 36px;
+		line-height: 46px;
+
+		@media (--palm) {
+			margin-bottom: 14px;
+			font-size: 24px;
+			line-height: 32px;
+		}
+	}
+	&__list {
+		lost-utility: clearfix;
+	}
+	&__tweet {
+		lost-column: 1/3;
+	}
+	iframe {
+		margin: 0 !important;
+	}
+}
+.faq {
+	@media (--lap-and-bigger) {
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		border-bottom: 2px solid #ecf0f1;
 	}
 
 	&__title {
@@ -509,7 +535,13 @@ input, select, textarea, button {
 }
 .footer {
 	overflow: hidden;
+	margin-top: 42px;
 	padding: 17px 0 20px;
+	border-top: 2px solid #ecf0f1;
+
+	@media (--palm) {
+		margin-top: 14px;
+	}
 
 	&__link {
 		float: right;
