@@ -42,7 +42,6 @@ input, select, textarea, button {
 	}
 }
 .masthead {
-	margin-bottom: 55px;
 	padding-top: 34px;
 	padding-bottom: 64px;
 	background: #f3f6f8 url("img/masthead-bg.jpg") 50% 50% no-repeat;
@@ -50,7 +49,6 @@ input, select, textarea, button {
 	text-align: center;
 
 	@media (--palm) {
-		margin-bottom: 25px;
 		padding-top: 24px;
 		padding-bottom: 0;
 		background-image: url("img/masthead-bg--palm.jpg");
@@ -139,6 +137,43 @@ input, select, textarea, button {
 		@media (--palm) {
 			width: 154px;
 		}
+	}
+}
+.users {
+	margin-bottom: 55px;
+	padding: 20px 0;
+	border-bottom: 1px solid #ecf0f1;
+
+	@media (--palm) {
+		margin-bottom: 25px;
+	}
+
+	&__inner {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	&__title {
+		padding: 10px 25px;
+		color: #7F8C8D;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 1.81px;
+		font-weight: normal;
+		font-size: 10px;
+		line-height: 17px;
+	}
+	&__list {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	&__item {
+		padding: 10px 25px;
+	}
+	&__logo {
 	}
 }
 .features {
