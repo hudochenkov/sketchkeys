@@ -467,8 +467,12 @@ input, select, textarea, button {
 	}
 	&__tweet {
 		lost-column: 1/3;
+
+		&:nth-child(n+4) {
+			margin-top: 22px;
+		}
 	}
-	iframe {
+	.twitter-tweet-rendered {
 		margin: 0 !important;
 	}
 }
