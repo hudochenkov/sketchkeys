@@ -3,7 +3,6 @@
 @import "_reset.pcss";
 @import "_vars.pcss";
 @import "_mixins.pcss";
-@import "_bxslider.pcss";
 
 /* Initial
 -----------------------------------------------------------------------------*/
@@ -487,11 +486,58 @@ input, select, textarea, button {
 		margin-left: @margin-right;
 	}
 }
-.photos-list {
+.slider {
+	position: relative;
+
+	&__frame {
+		position: relative;
+		overflow: hidden;
+		white-space: nowrap;
+		font-size: 0;
+		line-height: 0;
+	}
+	&__slides {
+		display: inline-block;
+	}
 	&__slide {
+		position: relative;
+		display: inline-block;
+		width: 100%;
 	}
 	&__photo {
 		width: 100%;
+	}
+	&__arrow {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 9999;
+		overflow: hidden;
+		width: 100px;
+		outline: 0;
+		background: url(img/slider-arrow.svg) right 17px center no-repeat;
+		text-indent: 100%;
+		white-space: nowrap;
+		user-select: none;
+
+		@media (--palm) {
+			width: 44px;
+			background-position: 50% 50%;
+			background-size: 34px;
+		}
+
+		&--disabled {
+			display: none;
+		}
+		&--prev {
+			left: 0;
+			cursor: w-resize;
+			transform: rotate(180deg);
+		}
+		&--next {
+			right: 0;
+			cursor: e-resize;
+		}
 	}
 }
 .buy {
