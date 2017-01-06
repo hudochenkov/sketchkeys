@@ -124,7 +124,7 @@
 			<li class="features__item features__item--discover">
 				<h3 class="features__feature-name">Discover new possibilities</h3>
 
-				<p class="features__description">While using SketchKeys and following @sketchkeys on Twitter you’ll find new features, tips and tricks for using Sketch.</p>
+				<p class="features__description">While using SketchKeys and following <a href="https://twitter.com/sketchkeys">@sketchkeys</a> on Twitter you’ll find new features, tips and tricks for using Sketch.</p>
 			</li>
 
 			<li class="features__item features__item--improve">
@@ -339,11 +339,183 @@
 						<p class="buy__shipping">Free worldwide shipping.</p>
 
 						<div class="buy__shopify">
-							<div data-embed_type="product" data-shop="sketchkeys.myshopify.com" data-product_name="Sketch Shortcuts Stickers" data-product_handle="sketch-shortcuts-stickers" data-has_image="false" data-display_size="compact" data-redirect_to="cart" data-buy_button_text="Add to cart" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="ff4324" data-button_text_color="ffffff" data-background_color="ecf0f1" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>
-							<script type="text/javascript">
-							document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
-							</script>
-							<noscript><a href="https://sketchkeys.myshopify.com/cart/16564191361:1" target="_blank">Buy Sketch Shortcuts Stickers</a></noscript>
+<div id='product-component-466273057e4'></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'sketchkeys.myshopify.com',
+      apiKey: '655a916cfa5f1eab28d2b0b6ef44d7ac',
+      appId: '6',
+    });
+
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: [5389615873],
+        node: document.getElementById('product-component-466273057e4'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "variantId": "all",
+    "width": "240px",
+    "contents": {
+      "img": false,
+      "title": false,
+      "variantTitle": false,
+      "price": false,
+      "description": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "text": {
+      "button": "Add to cart"
+    },
+    "styles": {
+      "product": {
+        "text-align": "left",
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "button": {
+        "background-color": "#ff4324",
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px",
+        "padding-left": "30px",
+        "padding-right": "30px",
+        ":hover": {
+          "background-color": "#e63c20"
+        },
+        ":focus": {
+          "background-color": "#e63c20"
+        },
+        "font-weight": "bold"
+      },
+      "quantityInput": {
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px"
+      }
+    }
+  },
+  "cart": {
+    "contents": {
+      "button": true
+    },
+    "styles": {
+      "button": {
+        "background-color": "#ff4324",
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px",
+        ":hover": {
+          "background-color": "#e63c20"
+        },
+        ":focus": {
+          "background-color": "#e63c20"
+        },
+        "font-weight": "bold"
+      },
+      "footer": {
+        "background-color": "#ffffff"
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "variantTitle": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "background-color": "#ff4324",
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px",
+        "padding-left": "30px",
+        "padding-right": "30px",
+        ":hover": {
+          "background-color": "#e63c20"
+        },
+        ":focus": {
+          "background-color": "#e63c20"
+        },
+        "font-weight": "bold"
+      },
+      "quantityInput": {
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px"
+      }
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "background-color": "#ff4324",
+        ":hover": {
+          "background-color": "#e63c20"
+        },
+        ":focus": {
+          "background-color": "#e63c20"
+        },
+        "font-weight": "bold"
+      },
+      "count": {
+        "font-size": "14px"
+      }
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  }
+}
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
 						</div>
 
 						<p class="buy__security">Payments are processed via secure Shopify server</p>
@@ -388,10 +560,10 @@
 									<li class="slider__slide js_slide">
 										<img
 											class="slider__photo"
-											src="img/photos/white-kit.jpg"
+											src="img/photos/xcode-keyboard-white-stickers.jpg"
 											srcset="
-												img/photos/white-kit.jpg 794w,
-												img/photos/white-kit@2x.jpg 1588w
+												img/photos/xcode-keyboard-white-stickers.jpg 794w,
+												img/photos/xcode-keyboard-white-stickers@2x.jpg 1588w
 											"
 											sizes="
 												(min-width: 768px) 50vw,
@@ -403,10 +575,10 @@
 									<li class="slider__slide js_slide">
 										<img
 											class="slider__photo"
-											src="img/photos/gift-envelopes.jpg"
+											src="img/photos/xcode-keyboard-black.jpg"
 											srcset="
-												img/photos/gift-envelopes.jpg 794w,
-												img/photos/gift-envelopes@2x.jpg 1588w
+												img/photos/xcode-keyboard-black.jpg 794w,
+												img/photos/xcode-keyboard-black@2x.jpg 1588w
 											"
 											sizes="
 												(min-width: 768px) 50vw,
@@ -418,10 +590,25 @@
 									<li class="slider__slide js_slide">
 										<img
 											class="slider__photo"
-											src="img/photos/sketch-logo-stickers.jpg"
+											src="img/photos/xcode-keyboard-white-shortcuts.jpg"
 											srcset="
-												img/photos/sketch-logo-stickers.jpg 794w,
-												img/photos/sketch-logo-stickers@2x.jpg 1588w
+												img/photos/xcode-keyboard-white-shortcuts.jpg 794w,
+												img/photos/xcode-keyboard-white-shortcuts@2x.jpg 1588w
+											"
+											sizes="
+												(min-width: 768px) 50vw,
+												100vw
+											"
+											alt="White kit"
+										>
+									</li>
+									<li class="slider__slide js_slide">
+										<img
+											class="slider__photo"
+											src="img/photos/xcode-keyboard-white.jpg"
+											srcset="
+												img/photos/xcode-keyboard-white.jpg 794w,
+												img/photos/xcode-keyboard-white@2x.jpg 1588w
 											"
 											sizes="
 												(min-width: 768px) 50vw,
@@ -451,17 +638,189 @@
 						<p class="buy__shipping">Free worldwide shipping.</p>
 
 						<div class="buy__shopify">
+							<div id='product-component-561e44859cc'></div>
+<div id='product-component-cf6e5c2ebd5'></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'sketchkeys.myshopify.com',
+      apiKey: '655a916cfa5f1eab28d2b0b6ef44d7ac',
+      appId: '6',
+    });
+
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: [8753894797],
+        node: document.getElementById('product-component-cf6e5c2ebd5'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "variantId": "all",
+    "width": "240px",
+    "contents": {
+      "img": false,
+      "title": false,
+      "variantTitle": false,
+      "price": false,
+      "description": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "text": {
+      "button": "Add to cart"
+    },
+    "styles": {
+      "product": {
+        "text-align": "left",
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "button": {
+        "background-color": "#ff4324",
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px",
+        "padding-left": "30px",
+        "padding-right": "30px",
+        ":hover": {
+          "background-color": "#e63c20"
+        },
+        ":focus": {
+          "background-color": "#e63c20"
+        },
+        "font-weight": "bold"
+      },
+      "quantityInput": {
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px"
+      }
+    }
+  },
+  "cart": {
+    "contents": {
+      "button": true
+    },
+    "styles": {
+      "button": {
+        "background-color": "#ff4324",
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px",
+        ":hover": {
+          "background-color": "#e63c20"
+        },
+        ":focus": {
+          "background-color": "#e63c20"
+        },
+        "font-weight": "bold"
+      },
+      "footer": {
+        "background-color": "#ffffff"
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "variantTitle": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "background-color": "#ff4324",
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px",
+        "padding-left": "30px",
+        "padding-right": "30px",
+        ":hover": {
+          "background-color": "#e63c20"
+        },
+        ":focus": {
+          "background-color": "#e63c20"
+        },
+        "font-weight": "bold"
+      },
+      "quantityInput": {
+        "font-size": "14px",
+        "padding-top": "15px",
+        "padding-bottom": "15px"
+      }
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "background-color": "#ff4324",
+        ":hover": {
+          "background-color": "#e63c20"
+        },
+        ":focus": {
+          "background-color": "#e63c20"
+        },
+        "font-weight": "bold"
+      },
+      "count": {
+        "font-size": "14px"
+      }
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  }
+}
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
 						</div>
 
 						<p class="buy__security">Payments are processed via secure Shopify server</p>
 
 						<ul class="buy-features">
-							<li class="buy-features__feature buy-features__feature--gift">
-								<h3 class="buy-features__name">Gift option</h3>
-
-								<p class="buy-features__description">SketchKeys is a great gift for designer. That's why we have a gift option with beautiful designs by <a class="buy-features__link" href="http://www.wrapmagazineshop.com/collections/wrapping-paper">Wrap Paper</a>. Printed on 100% recycled uncoated paper, using vegetable based inks.</p>
-							</li>
-
 							<li class="buy-features__feature buy-features__feature--produced">
 								<h3 class="buy-features__name">Produced locally</h3>
 
@@ -483,13 +842,13 @@
 					<li class="faq__item">
 						<h3 class="faq__question">Who created SketchKeys?</h3>
 
-						<p class="faq__answer">My name is <a href="https://twitter.com/hvost">Artiom</a> and I’m a <a href="https://medium.com/@hvost/how-it-feels-to-become-a-citizen-of-the-world-7a91989d2de0">nomadic designer</a>. My parents (both designers) are helping me with the production process. Feel free to <a href="mailto:hvoostik@gmail.com">drop me a line</a>.</p>
+						<p class="faq__answer">My name is <a href="https://twitter.com/hvost">Artiom</a> and I’m a Product Designer at <a href="https://www.wework.com">WeWork</a>. My parents (both graphic designers) are helping me with the production and shipping process. Feel free to <a href="mailto:hvoostik@gmail.com">drop me a line</a>.</p>
 					</li>
 
 					<li class="faq__item">
 						<h3 class="faq__question">How long the shipping takes?</h3>
 
-						<p class="faq__answer">Shipping around Europe is taking about 8-15 days, US and the rest of the world 11-22 days.</p>
+						<p class="faq__answer">Shipping around Europe is taking about 8-15 days, US – 11-22 days, Asia and Oceania – 14-30 days.</p>
 					</li>
 
 					<li class="faq__item">
@@ -511,12 +870,12 @@
 					<li class="faq__item">
 						<h3 class="faq__question">How durable are the stickers?</h3>
 
-						<p class="faq__answer">Stickers are made to be used for at least half a year, giving you enough time to remember all the shortcuts combinations 💪</p>
+						<p class="faq__answer">Stickers are made to last at least for a year, giving you enough time to remember all the shortcuts combinations 💪</p>
 					</li>
 					<li class="faq__item">
 						<h3 class="faq__question">I’m colorblind and I want to use your product.</h3>
 
-						<p class="faq__answer"><a href="mailto:hvoostik@gmail.com">Send me an email</a> and I’ll create a custom version for you for the same price.</p>
+						<p class="faq__answer"><a href="mailto:hvoostik@gmail.com">Send me an email</a> and I’ll create a <a href="https://twitter.com/303/status/752229924191162368?ref_src=twsrc%5Etfw">custom version</a> for you for the same price.</p>
 					</li>
 
 					<li class="faq__item">
@@ -526,7 +885,7 @@
 					</li>
 
 					<li class="faq__item">
-						<h3 class="faq__question">I like the stickers but I’d love to get it for other software besides Sketch.</h3>
+						<h3 class="faq__question">I like the stickers but I’d love to get it for other software besides Sketch and Xcode.</h3>
 
 						<p class="faq__answer">Sounds interesting! <a href="mailto:hvoostik@gmail.com">Send me an email</a> and I’ll see what I can do.</p>
 					</li>
@@ -536,7 +895,7 @@
 	</section>
 
 	<section class="tweets">
-		<h2 class="tweets__title">What people tweet about SketchKeys</h2>
+		<h2 class="tweets__title">What community tweets about our products</h2>
 
 		<div class="tweets__list">
 			<div class="tweets__tweet">
