@@ -313,6 +313,19 @@ input, select, textarea, button {
 			text-align: center;
 		}
 	}
+	&__main-text {
+		position: relative;
+		transition: transform .2s ease-out;
+
+		@media (--not-palm) {
+			margin-bottom: 10px;
+		}
+	}
+	&--current &__main-text {
+		@media (--not-palm) {
+			transform: translateY(20px);
+		}
+	}
 	&__title {
 		margin-bottom: 5px;
 		font-size: 36px;
@@ -342,7 +355,6 @@ input, select, textarea, button {
 		}
 	}
 	&__description {
-		margin-bottom: 10px;
 		font-size: 16px;
 		line-height: 22px;
 
@@ -355,9 +367,7 @@ input, select, textarea, button {
 		font-weight: bold;
 		font-size: 20px;
 		line-height: 30px;
-		transition-timing-function: ease-out;
-		transition-duration: .1s;
-		transition-property: transform, opacity;
+		transition: opacity .2s ease-out;
 
 		@media (--palm) {
 			display: none;
@@ -365,7 +375,6 @@ input, select, textarea, button {
 	}
 	&--current &__view-details {
 		opacity: 0;
-		transform: translateY(100%);
 	}
 	&__image-wrapper {
 		align-self: flex-end;
