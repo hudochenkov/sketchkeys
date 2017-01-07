@@ -307,18 +307,12 @@ input, select, textarea, button {
 	}
 	&__text {
 		align-self: center;
-		padding: 25px 0;
-		padding-left: 58px;
-		width: 60%;
+		padding: 35px;
+		width: 100%;
+		text-align: center;
 
-		@media (--portable) {
-			padding-right: 58px;
-			width: 100%;
-		}
 		@media (--palm) {
-			padding-right: 0;
-			padding-left: 0;
-			text-align: center;
+			padding: 25px 0;
 		}
 	}
 	&__main-text {
@@ -339,6 +333,9 @@ input, select, textarea, button {
 		font-size: 36px;
 		line-height: 46px;
 
+		@media (--not-palm) {
+			text-indent: -20px; /* visual center adjustment */
+		}
 		@media (--palm) {
 			margin: 0;
 			font-size: 24px;
@@ -363,6 +360,8 @@ input, select, textarea, button {
 		}
 	}
 	&__description {
+		margin: auto;
+		max-width: 340px;
 		font-size: 16px;
 		line-height: 22px;
 
@@ -383,20 +382,6 @@ input, select, textarea, button {
 	}
 	&--current &__view-details {
 		opacity: 0;
-	}
-	&__image-wrapper {
-		align-self: flex-end;
-		margin-top: 30px;
-		margin-right: 25px;
-		width: 40%;
-		text-align: right;
-
-		@media (--portable) {
-			display: none;
-		}
-	}
-	&__image {
-		max-width: 100%;
 	}
 }
 .twitter-wrapper {
