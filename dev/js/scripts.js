@@ -69,6 +69,14 @@ $(document).ready(function() {
 
 		e.preventDefault();
 	});
+
+	if (window.location.hash && window.location.hash === '#xcode') {
+		var xcodeClick = document.createEvent('HTMLEvents');
+
+		xcodeClick.initEvent('click', true, false);
+
+		document.querySelector('.js-xcode-tab-title').dispatchEvent(xcodeClick);
+	}
 });
 
 // Shopify buttons
