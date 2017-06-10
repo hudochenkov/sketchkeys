@@ -2,6 +2,11 @@ $(document).ready(function() {
 	Array.prototype.slice.call(document.querySelectorAll('.js_slider')).forEach(function (element, index) {
 		element.addEventListener('before.lory.slide', handleSliderArrows);
 
+		// Hack. Sometimes lory doesn't respond to arrows after page load
+		element.addEventListener('after.lory.init', function() {
+			setTimeout(fireRefreshEventOnWindow, 100);
+		});
+
 		lory(element, {
 			rewindOnResize: false,
 		});
