@@ -75,12 +75,12 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 
-	if (window.location.hash && window.location.hash === '#xcode') {
-		var xcodeClick = document.createEvent('HTMLEvents');
+	if (window.location.hash && window.location.hash === '#photoshop') {
+		var photoshopClick = document.createEvent('HTMLEvents');
 
-		xcodeClick.initEvent('click', true, false);
+		photoshopClick.initEvent('click', true, false);
 
-		document.querySelector('.js-xcode-tab-title').dispatchEvent(xcodeClick);
+		document.querySelector('.js-photoshop-tab-title').dispatchEvent(photoshopClick);
 	}
 });
 
