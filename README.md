@@ -5,15 +5,11 @@ All files for production are compiled with [Grunt]. CSS compiled with [PostCSS].
 ## Setup
 
 1. Install [Node.js].
-2. Install [Grunt] CLI:
-
-		$ npm install -g grunt-cli
-
-3. Install development modules:
+2. Install development modules:
 
 		$ npm install
 
-4. Run `grunt build`.
+3. Run `npm run build`.
 
 ## Folders structure
 
@@ -35,18 +31,16 @@ All files for production are compiled with [Grunt]. CSS compiled with [PostCSS].
 
 Start watching service which generates _dev_ version on each source file change, also this start local webserver with autoreload:
 
-	$ grunt
+	$ npm start
 
 Generate _production_ (minified and optimized) version:
 
-	$ grunt build
+	$ npm run build
 
-## Other Grunt-tasks
+## Other tasks
 
-**test** — check JavaScript code style in scripts.js and Gruntfile.js.
+**npm test** — check JavaScript code style in scripts.js and Gruntfile.js.
 
-**deploy** — upload files to the GitHub Pages.
-
-[Grunt]: http://gruntjs.com/
-[PostCSS]: https://github.com/postcss/postcss/
+[Grunt]: https://gruntjs.com/
+[PostCSS]: https://postcss.org/
 [Node.js]: https://nodejs.org/

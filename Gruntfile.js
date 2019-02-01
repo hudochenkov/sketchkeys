@@ -45,9 +45,7 @@ module.exports = function(grunt) {
 					require('postcss-custom-media')(),
 					require('postcss-media-minmax')(),
 					require('lost')(),
-					require('autoprefixer')({
-						browsers: ['last 2 versions', '> 1%', 'Android >= 4', 'iOS >= 8']
-					})
+					require('autoprefixer')()
 				]
 			},
 			default: {
@@ -59,26 +57,7 @@ module.exports = function(grunt) {
 					map: false,
 					processors: [
 						require('cssnano')({
-							autoprefixer: false,
-							calc: false,
-							colormin: true,
-							convertValues: false,
-							discardComments: true,
-							discardDuplicates: true,
-							discardEmpty: true,
-							discardUnused: true,
-							mergeIdents: true,
-							mergeLonghand: true,
-							mergeRules: false,
-							minifyFontValues: true,
-							minifyGradients: true,
-							minifySelectors: true,
-							normalizeCharset: true,
-							normalizeUrl: false,
-							orderedValues: false,
-							reduceIdents: true,
-							uniqueSelectors: true,
-							zindex: true
+							preset: 'default'
 						})
 					]
 				},
@@ -171,13 +150,6 @@ module.exports = function(grunt) {
 			default: {
 				src: ['<%= project.js.src %>/scripts.js', 'Gruntfile.js']
 			}
-		},
-
-		'gh-pages': {
-			options: {
-				base: 'build'
-			},
-			src: '**/*'
 		},
 
 		svgstore: {
@@ -273,6 +245,4 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['newer:copy', 'svgstore:dev', 'concat:jslibs', 'postcss:default', 'browserSync', 'watch']);
 	grunt.registerTask('test', ['jscs']);
 	grunt.registerTask('build', ['clean', 'copy', 'svgstore:build', 'concat:jslibs', 'postcss:default', 'postcss:minify', 'usebanner']);
-
-	grunt.registerTask('deploy', ['build', 'gh-pages']);
 };
