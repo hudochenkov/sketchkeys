@@ -26,7 +26,7 @@
 		</div>
 		<nav class="header__menu --desktop">
 			<a href="/sketch.html" class="header__menu__item">Sketch</a>
-			<a href="/photoshop.html" class="header__menu__item">Photoshop</a>
+			<span class="header__menu__item --active">Photoshop</span>
 			<a href="/figma.html" class="header__menu__item">Figma</a>
 		</nav>
 		<div class="header__contact" data-messenger-btn>
@@ -45,6 +45,15 @@
 		<a href="#" class="header__menu__item" data-messenger-btn>Contact</a>
 	</nav>
 </header>
+
+<nav class="breadcrumbs inner">
+	<a href="/" class="breadcrumbs__link">All Products</a>
+	<svg class="breadcrumbs__arrow" xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10">
+		<path fill="#7F8C8D" fill-rule="evenodd" d="M6.346 4.703a.773.773 0 0 1-.227.568L2.267 9.12a.783.783 0 0 1-1.098 0 .775.775 0 0 1-.001-1.099l3.32-3.32-3.32-3.319A.775.775 0 0 1 1.169.285.783.783 0 0 1 2.267.284l3.852 3.85a.773.773 0 0 1 .227.569z"/>
+	</svg>
+	<span class="breadcrumbs__current">Photoshop</span>
+</nav>
+
 
 <svg style="position: absolute; width: 0; height: 0; visibility: hidden;">
 	<symbol id="icon-photoshop">
@@ -89,226 +98,252 @@
 
 </svg>
 
-<div class="masthead">
-	<div class="inner">
-		<h1 class="masthead__slogan">Accelerate your design and<br class="masthead__slogan-breaker"> development
-			workflows.
-		</h1>
+<div class="product">
+	<section class="product__gallery" data-gallery>
 
-		<p class="masthead__subslogan">Learn shortkeys easily with beautiful&nbsp;keyboard stickers.</p>
+		<div class="product__gallery__i">
+			<div class="gallery" id="gallery">
+				<div class="gallery__item">
+					<img class="gallery__item__img" src="img/photos/black-angle2.jpg"
+						 srcset="img/photos/black-angle2@2x.jpg 2x" alt="">
+				</div>
+				<div class="gallery__item">
+					<img class="gallery__item__img" src="img/photos/black-angle2.jpg"
+						 srcset="img/photos/black-angle2@2x.jpg 2x" alt="">
+				</div>
+				<div class="gallery__item">
+					<img class="gallery__item__img" src="img/photos/black-angle2.jpg"
+						 srcset="img/photos/black-angle2@2x.jpg 2x" alt="">
+				</div>
+				<div class="gallery__item">
+					<img class="gallery__item__img" src="img/photos/black-angle2.jpg"
+						 srcset="img/photos/black-angle2@2x.jpg 2x" alt="">
+				</div>
+			</div>
 
-		<p class="masthead__action-wrapper">
-			<a class="btn" href="#products" data-btn-scroll>Shop Stickers</a>
-		</p>
-
-		<p class="masthead__keyboard-wrapper">
-			<img
-					class="masthead__keyboard"
-					src="img/keyboard/825.png"
-					srcset="
-					img/keyboard/390.png 390w,
-					img/keyboard/728.png 728w,
-					img/keyboard/780.png 780w,
-					img/keyboard/825.png 825w,
-					img/keyboard/1456.png 1456w,
-					img/keyboard/1650.png 1650w
-				"
-					sizes="
-					(max-width: 767px) calc(100vw - 20px),
-					(min-width: 865px) 825px,
-					calc(100vw - 40px)
-				"
-					alt="Keyboard with SketchKey stickers"
-			>
-		</p>
-	</div>
-</div><!-- .masthead -->
-
-<section class="users">
-	<div class="inner">
-		<div class="users__inner">
-			<h2 class="users__title">Used by&nbsp;beautiful people working&nbsp;at:</h2>
-
-			<ul class="users__list">
-				<li class="users__item">
-					<img class="users__logo --n1" src="img/users/google.svg" width="91" height="30" alt="Google">
-				</li>
-				<li class="users__item">
-					<img class="users__logo --n2" src="img/users/netflix.svg" width="93" height="27" alt="Netflix">
-				</li>
-				<li class="users__item">
-					<img class="users__logo --n3" src="img/users/facebook.svg" width="115" height="22" alt="Facebook">
-				</li>
-				<li class="users__item">
-					<img class="users__logo --n4" src="img/users/hbo.svg" width="58" height="25" alt="HBO">
-				</li>
-				<li class="users__item">
-					<img class="users__logo --n5" src="img/users/hp.svg" width="38" height="38" alt="HP">
-				</li>
-				<li class="users__item">
-					<img class="users__logo --n6" src="img/users/boeing.svg" width="116" height="27" alt="Boeing">
-				</li>
-			</ul>
+			<div class="gallery__btns" id="gallery-btns">
+				<div class="gallery__btns__arrow --prev"></div>
+				<div class="gallery__btns__arrow --next"></div>
+			</div>
 		</div>
-	</div>
-</section>
+		<div class="gallery__thumbs" id="gallery-thumbs">
+			<div class="gallery__thumbs__item">
+				<img class="gallery__thumbs__item__img" src="img/photos/black-angle2.jpg"
+					 srcset="img/photos/black-angle2@2x.jpg 2x" alt="">
+			</div>
+			<div class="gallery__thumbs__item">
+				<img class="gallery__thumbs__item__img" src="img/photos/black-angle2.jpg"
+					 srcset="img/photos/black-angle2@2x.jpg 2x" alt="">
+			</div>
+			<div class="gallery__thumbs__item">
+				<img class="gallery__thumbs__item__img" src="img/photos/black-angle2.jpg"
+					 srcset="img/photos/black-angle2@2x.jpg 2x" alt="">
+			</div>
+			<div class="gallery__thumbs__item">
+				<img class="gallery__thumbs__item__img" src="img/photos/black-angle2.jpg"
+					 srcset="img/photos/black-angle2@2x.jpg 2x" alt="">
+			</div>
+		</div>
+	</section>
+
+	<section class="product__details">
+		<section class="buy">
+			<h1 class="buy__title">Keyboard Stickers For Photoshop</h1>
+			<p class="buy__price">$11.00</p>
+			<div class="buy__shipping">Free worldwide shipping</div>
+			<div class="buy__shopify">
+				<div id='product-component-2bcd54ed610'></div>
+			</div>
+			<p class="buy__security">Payments are processed via secure Shopify server</p>
+			<div class="buy__sizes">
+				<h3 class="buy__sizes__title">Size Guide</h3>
+				<div class="buy__sizes__sections">
+					<div class="buy__sizes__section">
+						<div class="buy__sizes__size">
+							<span>L</span>
+						</div>
+						<div class="buy__sizes__descr">
+							<ul class="buy__sizes__list">
+								<li class="buy__sizes__list__item">
+									MacBook Pro 2016+
+								</li>
+								<li class="buy__sizes__list__item">
+									MacBook Air 2017+
+								</li>
+								<li class="buy__sizes__list__item">
+									Apple Magic Keyboard
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="buy__sizes__section">
+						<div class="buy__sizes__size">
+							<span>S</span>
+						</div>
+						<div class="buy__sizes__descr">
+							<ul class="buy__sizes__list">
+								<li class="buy__sizes__list__item">
+									All earlier MacBook models
+								</li>
+								<li class="buy__sizes__list__item">
+									Apple Keyboard
+								</li>
+								<li class="buy__sizes__list__item">
+									Most PC keyboards and laptops
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+</div>
 
 <div class="inner">
-	<div class="products" id="products">
+	<!--Qualities-->
+	<ul class="qualities">
+		<li class="qualities__item">
+			<svg class="qualities__item__icon --n1" xmlns="http://www.w3.org/2000/svg" width="43" height="29" viewBox="0 0 43 29">
+				<g fill="#0433FF" fill-rule="evenodd">
+					<path d="M38.521 28.716H4.48C2.009 28.716 0 26.72 0 24.274V4.726C0 2.28 2.009.284 4.479.284H38.52C40.991.284 43 2.28 43 4.726v19.548c0 2.447-2.009 4.442-4.479 4.442zM4.48 2.06c-1.482 0-2.687 1.196-2.687 2.665v19.548c0 1.47 1.205 2.665 2.687 2.665H38.52c1.482 0 2.687-1.196 2.687-2.665V4.726c0-1.47-1.205-2.665-2.687-2.665H4.48z"/>
+					<path d="M13.438 19.83H6.27a.892.892 0 0 1-.896-.888c0-.49.4-.888.896-.888h7.167c.495 0 .895.397.895.888s-.4.889-.895.889zM18.812 23.385H6.272a.892.892 0 0 1-.897-.889c0-.49.4-.888.896-.888h12.541c.496 0 .896.397.896.888s-.4.889-.896.889zM25.979 14.5c-4.329 0-8.213-2.872-9.446-6.983a2.57 2.57 0 0 1 .423-2.297c.66-.884 1.83-1.286 2.878-.975 4.145 1.221 7.041 5.073 7.041 9.367 0 .49-.4.888-.896.888zm-6.884-8.587a.9.9 0 0 0-.704.369.805.805 0 0 0-.14.728c.918 3.059 3.625 5.277 6.774 5.655a8.072 8.072 0 0 0-5.702-6.721.915.915 0 0 0-.228-.031z"/>
+					<path d="M25.979 14.5a.892.892 0 0 1-.896-.888c0-4.294 2.896-8.146 7.041-9.37 1.048-.31 2.216.094 2.879.976.506.67.658 1.51.423 2.296-1.234 4.114-5.118 6.986-9.447 6.986zm6.884-8.587a.908.908 0 0 0-.228.033c-3.084.911-5.323 3.598-5.702 6.721 3.15-.377 5.859-2.596 6.775-5.655a.805.805 0 0 0-.141-.728.893.893 0 0 0-.704-.371z"/>
+					<path d="M25.979 28.716a.892.892 0 0 1-.896-.889V1.173c0-.491.401-.889.896-.889s.896.398.896.889v26.654c0 .491-.4.889-.896.889z"/>
+					<path d="M20.604 19.83a.899.899 0 0 1-.634-.259.885.885 0 0 1 0-1.257l5.375-5.331a.903.903 0 0 1 1.268 0c.35.346.35.91 0 1.257l-5.375 5.331a.899.899 0 0 1-.634.26z"/>
+					<path d="M31.354 19.83a.899.899 0 0 1-.634-.259l-5.375-5.33a.885.885 0 0 1 0-1.258.903.903 0 0 1 1.268 0l5.375 5.33c.35.347.35.912 0 1.258a.899.899 0 0 1-.634.26z"/>
+					<path d="M42.104 14.5H.896A.892.892 0 0 1 0 13.612c0-.491.4-.889.896-.889h41.208c.495 0 .896.398.896.889 0 .49-.4.888-.896.888z"/>
+				</g>
+			</svg>
+			<h3 class="qualities__item__title">
+				Gift Wrapping
+			</h3>
+			<p class="qualities__item__descr">
+				Our gift envelopes made from beautiful
+				<a href="https://www.wrapmagazineshop.com/collections/wrapping-paper">Wrap Paper</a>. Printed on 100%
+				recycled uncoated paper, using vegetable based inks.
+			</p>
+		</li>
+		<li class="qualities__item">
+			<svg class="qualities__item__icon --n2" xmlns="http://www.w3.org/2000/svg" width="29" height="41" viewBox="0 0 29 41">
+				<g fill="none" fill-rule="evenodd">
+					<path stroke="#0433FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.135 21.132H9.853c-4.808 0-8.694 3.847-8.694 8.58v8.123c0 .979.8 1.77 1.795 1.77h23.08c.995 0 1.807-.791 1.807-1.77v-8.123c0-4.733-3.899-8.58-8.706-8.58zM7.724 12.312c0 3.679 3.033 6.666 6.77 6.666 3.737 0 6.77-2.983 6.77-6.666 0-2.023-.916-3.84-2.366-5.06a3.63 3.63 0 0 0 .448-1.734c.002-2.276-2.171-4.124-4.852-4.124-2.677 0-4.851 1.848-4.851 4.125 0 .62.16 1.203.447 1.735a6.6 6.6 0 0 0-2.366 5.058z"/>
+					<path fill="#0433FF" d="M22.86 30.998c-.066.06-3.186 3.12-4.334 4.247a.6.6 0 0 1-.842 0l-4.33-4.247a3.275 3.275 0 0 1 0-4.689 3.405 3.405 0 0 1 4.754-.012 3.402 3.402 0 0 1 4.752.012 3.282 3.282 0 0 1 0 4.689z"/>
+				</g>
+			</svg>
+			<h3 class="qualities__item__title">
+				Produced locally
+			</h3>
+			<p class="qualities__item__descr">
+				The product is produced in our hometown Minsk (Belarus) in a small privately held printing house.
+			</p>
+		</li>
+		<li class="qualities__item">
+			<svg class="qualities__item__icon --n3" xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37">
+				<g fill="none" fill-rule="evenodd">
+					<rect width="23" height="23" x="13" y="13" stroke="#0433FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="4"/>
+					<path fill="#0433FF" stroke="#0433FF" d="M27.106 29.666l-.388 1.06a.491.491 0 0 1-.127.195.334.334 0 0 1-.236.079.392.392 0 0 1-.25-.083.27.27 0 0 1-.105-.224c0-.05.014-.113.042-.19.028-.078.048-.136.06-.174l1.866-4.881a.882.882 0 0 1 .19-.32A.45.45 0 0 1 28.5 25a.45.45 0 0 1 .342.128.882.882 0 0 1 .19.32l1.867 4.88c.01.04.03.097.059.175.028.077.042.14.042.19a.27.27 0 0 1-.106.224.392.392 0 0 1-.249.083.334.334 0 0 1-.236-.079.491.491 0 0 1-.127-.194l-.388-1.061h-2.788zm2.56-.63l-1.158-3.19h-.016l-1.158 3.19h2.332z"/>
+					<g fill="#0433FF">
+						<path d="M7.717 17.654H0v-2.15h7.717zM17.64 7.728h-2.15V.011h2.15zM5.905 4.395l-1.52 1.52 5.162 5.163 1.52-1.52z"/>
+					</g>
+				</g>
+			</svg>
+			<h3 class="qualities__item__title">
+				Durable
+			</h3>
+			<p class="qualities__item__descr">
+				We proudly stand behind the quality of our products. The stickers are lasting for years, giving you
+				enough time to learn the shortcuts.
+			</p>
+		</li>
+	</ul><!--Qualities-->
+	<section class="faq"><!--FAQ-->
+		<h2 class="faq__title">FAQ</h2>
 
-		<div class="products__tabs">
-			<div class="products__tab products__tab--current">
-				<img
-						class="products__tab__img"
-						src="img/photos/photoshop-keyboard-stickers-black.jpg"
-						srcset="
-										img/photos/photoshop-keyboard-stickers-black.jpg 794w,
-										img/photos/photoshop-keyboard-stickers-black@2x.jpg 1588w
-									"
-						sizes="
-										(min-width: 768px) 50vw,
-										100vw
-									"
-						alt="White kit"
-				>
-			</div><!-- .products__tab -->
+		<div class="faq__columns">
+			<div class="faq__column">
+				<ul class="faq__list">
+					<li class="faq__item">
+						<h3 class="faq__question">Who created SketchKeys?</h3>
 
-			<div class="products__tab">
-				<img
-						class="products__tab__img"
-						src="img/photos/photoshop-keyboard-stickers-white.jpg"
-						srcset="
-											img/photos/photoshop-keyboard-stickers-white.jpg 794w,
-											img/photos/photoshop-keyboard-stickers-white@2x.jpg 1588w
-										"
-						sizes="
-											(min-width: 768px) 50vw,
-											100vw
-										"
-						alt="White kit"
-				>
-			</div><!-- .products__tab -->
+						<p class="faq__answer">SketchKeys is a family-operated project. My name is <a
+								href="https://twitter.com/hvost">Artiom</a> and I’m a former Senior Product Designer at <a
+								href="https://www.wework.com">WeWork</a> and author of <a href="https://productdesigninterview.com">"Solving
+							Product Design Exercises"</a>. My parents (both graphic designers) are taking care of the production and
+							shipping process. Feel free to <a href="mailto:hvoostik@gmail.com">reach out</a>.</p>
+					</li>
 
-			<ul class="products__tab-titles">
-				<li class="products__tab-title tab-card tab-card--current">
-					Black
-				</li>
+					<li class="faq__item">
+						<h3 class="faq__question">How long the shipping takes?</h3>
 
-				<li class="products__tab-title tab-card js-photoshop-tab-title">
-					White
-				</li>
-			</ul>
-		</div><!-- .products__tabs -->
+						<p class="faq__answer">Shipping around Europe is taking about 8-15 days, US – 11-22 days, Asia and Oceania –
+							14-30 days.</p>
+					</li>
 
-		<section class="features">
-			<h2 class="features__title">Design Smarter, Not Harder</h2>
-			<ul class="features__list">
-				<li class="features__item features__item--accelerate">
-					<h3 class="features__feature-name">Accelerate your workflow</h3>
+					<li class="faq__item">
+						<h3 class="faq__question">Is peeling off the stickers going to damage my keyboard?</h3>
 
-					<p class="features__description">
-						Using keyboard shortcuts is going to make the implementation of your designs more efficient.
-						Spend your saved time to research, exploration or a coffee.
-					</p>
-				</li>
+						<p class="faq__answer">Absolutely not! While working on the product I made at least a dozen of cycles of
+							putting stickers and peeling them off. Both my MacBook and external keyboards are in a great shape!</p>
+					</li>
 
-				<li class="features__item features__item--discover">
-					<h3 class="features__feature-name">Discover new features</h3>
+					<li class="faq__item">
+						<h3 class="faq__question">What if I don’t like the product?</h3>
 
-					<p class="features__description">
-						With the stickers you can discover features Sketch, Figma and Photoshop have you didn’t know
-						about.
-					</p>
-				</li>
+						<p class="faq__answer">We work hard to make sure it won’t happen. If you don’t like the product you can get
+							a refund 40 days since the shipping date.</p>
+					</li>
+				</ul>
+			</div>
 
-				<li class="features__item features__item--improve">
-					<h3 class="features__feature-name">Improve ergonomics</h3>
+			<div class="faq__column">
+				<ul class="faq__list">
+					<li class="faq__item">
+						<h3 class="faq__question">How durable are the stickers?</h3>
 
-					<p class="features__description">
-						Using keyboard shortcuts gives you an alternative to a mouse, overusing of which can lead to
-						discomfort, pain and health disorders.
-					</p>
-				</li>
-			</ul>
-		</section>
-	</div><!-- .products -->
+						<p class="faq__answer">Stickers are made to last at least for a year, giving you enough time to remember all
+							the shortcuts combinations 💪</p>
+					</li>
+					<li class="faq__item">
+						<h3 class="faq__question">I’m colorblind and I want to use your product.</h3>
 
-	<div class="product-links">
-		<h2 class="product-links__title">
-			Choose your design tool
-		</h2>
-		<div class="product-links__i">
-			<a href="/sketch.html" class="product-links__item">
-				<div class="product-links__item__i">
-					<svg class="product-links__item__icon --n1" xmlns="http://www.w3.org/2000/svg" width="33" height="27"
-						 viewBox="0 0 33 27">
-						<path fill="#000" fill-rule="evenodd"
-							  d="M28.15 0H4.192L0 7.613l16.17 18.619L32.343 7.613 28.15 0zm-1.1 2.05l2.453 4.46h-4.411l1.957-4.46zm-2.093-.097l-1.79 4.083-4.476-4.083h6.266zm-4.17 4.558h-9.232l4.616-4.212 4.615 4.212zM13.65 1.953L9.175 6.036l-1.79-4.083h6.266zm-8.359.097L7.25 6.51H2.838l2.454-4.46zM3.327 8.463h4.779l4.876 11.118L3.327 8.463zm6.913 0h11.862l-5.931 13.52-5.931-13.52zm9.12 11.118l4.876-11.118h4.779L19.36 19.581z"/>
-					</svg>
-					<h3 class="product-links__item__title">Sketch</h3>
-				</div>
-				<svg class="product-links__item__arrow" width="12" height="12">
-					<use xlink:href="#icon-arrow-right"/>
-				</svg>
-			</a>
-			<a href="/photoshop.html" class="product-links__item">
-				<div class="product-links__item__i">
-					<svg class="product-links__item__icon --n2" xmlns="http://www.w3.org/2000/svg" width="30" height="32"
-						 viewBox="0 0 30 32">
-						<g fill="#000" fill-rule="evenodd">
-							<path d="M10.146 24.008a1.07 1.07 0 0 1-1.078-1.06v-10.46a1.07 1.07 0 0 1 1.078-1.059 1.07 1.07 0 0 1 1.077 1.059v10.46c0 .586-.484 1.06-1.077 1.06z"/>
-							<path d="M13.145 20.017a1.07 1.07 0 0 1-1.077-1.059c0-.583.483-1.059 1.077-1.059 1.22 0 2.214-.975 2.214-2.176 0-1.2-.992-2.179-2.214-2.179h-3.002a1.07 1.07 0 0 1-1.077-1.059 1.07 1.07 0 0 1 1.077-1.058h3.002c2.408 0 4.369 1.926 4.369 4.296 0 2.368-1.96 4.294-4.369 4.294zM21.573 24.01c-1.187 0-2.317-.63-2.8-1.682a1.053 1.053 0 0 1 .538-1.401 1.088 1.088 0 0 1 1.426.529c.175.382.816.549 1.29.343.488-.218.573-.73.508-.953-.045-.153-.217-.527-.992-.589-2.003-.154-2.79-1.453-2.945-2.196-.327-1.103.217-2.72 1.718-3.39a3.389 3.389 0 0 1 2.316-.132c.825.25 1.486.81 1.82 1.532a1.055 1.055 0 0 1-.538 1.402 1.089 1.089 0 0 1-1.427-.53c-.107-.232-.353-.338-.488-.38a1.167 1.167 0 0 0-.795.04c-.497.22-.58.73-.514.953.044.155.217.53.992.591 2.002.154 2.79 1.453 2.945 2.196.324 1.1-.217 2.72-1.715 3.39-.434.189-.89.277-1.34.277z"/>
-							<path d="M5.199 31.421c-.27 0-.536-.095-.744-.291L.454 27.375a1.06 1.06 0 0 1-.334-.767V1.637A1.07 1.07 0 0 1 1.197.579h22.378a1.07 1.07 0 0 1 1.077 1.058v3.706a1.07 1.07 0 0 1-1.077 1.059 1.07 1.07 0 0 1-1.078-1.059V2.696H2.274v23.459l3.668 3.44c.43.405.446 1.074.037 1.498a1.087 1.087 0 0 1-.78.328z"/>
-							<path d="M28.803 31.421H5.2a1.07 1.07 0 0 1-1.078-1.058V9.513A1.07 1.07 0 0 1 5.2 8.452a1.07 1.07 0 0 1 1.077 1.06v19.79h21.45V6.514H5.2c-.282 0-.549-.109-.75-.3L.445 2.397A1.047 1.047 0 0 1 .424.9 1.094 1.094 0 0 1 1.947.877l3.688 3.518h23.168a1.07 1.07 0 0 1 1.077 1.058v24.91c0 .585-.48 1.058-1.077 1.058z"/>
-						</g>
-					</svg>
-					<h3 class="product-links__item__title">Photoshop</h3>
-				</div>
-				<svg class="product-links__item__arrow" width="12" height="12">
-					<use xlink:href="#icon-arrow-right"/>
-				</svg>
-			</a>
-			<a href="/figma.html" class="product-links__item">
-				<div class="product-links__item__i">
-					<svg class="product-links__item__icon --n3" xmlns="http://www.w3.org/2000/svg" width="20" height="30"
-						 viewBox="0 0 20 30">
-						<g fill="#000" fill-rule="evenodd">
-							<rect width="20" height="10" rx="5"/>
-							<path d="M5 10h5v10H5a5 5 0 0 1 0-10zM5 20h5v5a5 5 0 0 1-10 0 5 5 0 0 1 5-5z"/>
-							<rect width="10" height="10" x="10" y="10" rx="5"/>
-						</g>
-					</svg>
-					<h3 class="product-links__item__title">
-						Figma
-					</h3>
-					<span class="product-links__item__descr">Pre-order</span>
-				</div>
-				<svg class="product-links__item__arrow" width="12" height="12">
-					<use xlink:href="#icon-arrow-right"/>
-				</svg>
-			</a>
-			<span class="product-links__item --bordered">
-				<div class="product-links__item__i">
-					<svg class="product-links__item__icon --n4" xmlns="http://www.w3.org/2000/svg" width="31" height="32"
-						 viewBox="0 0 31 32">
-						<g fill="#000" fill-rule="evenodd">
-							<path d="M5.199 31.421c-.27 0-.536-.095-.744-.291L.454 27.375a1.06 1.06 0 0 1-.334-.767V1.637A1.07 1.07 0 0 1 1.197.579h22.378a1.07 1.07 0 0 1 1.077 1.058v3.706a1.07 1.07 0 0 1-1.077 1.059 1.07 1.07 0 0 1-1.078-1.059V2.696H2.274v23.459l3.668 3.44c.43.405.446 1.074.037 1.498a1.087 1.087 0 0 1-.78.328z"/>
-							<path d="M29.803 31.421H5.2a1.07 1.07 0 0 1-1.078-1.058V9.513A1.07 1.07 0 0 1 5.2 8.452a1.07 1.07 0 0 1 1.077 1.06v19.79h22.45V6.514H5.2c-.282 0-.549-.109-.75-.3L.445 2.397A1.047 1.047 0 0 1 .424.9 1.094 1.094 0 0 1 1.947.877l3.688 3.518h24.168a1.07 1.07 0 0 1 1.077 1.058v24.91c0 .585-.48 1.058-1.077 1.058z"/>
-							<path d="M14.584 18.686a.503.503 0 0 1 0-.46l2.216-4.51a.518.518 0 0 0-.015-.48.457.457 0 0 0-.392-.236h-1.429a.486.486 0 0 0-.428.296l-.705 1.772c-.108.262-.216.523-.326.82-.108.297-.226.601-.339.95h-.064c-.154-.35-.28-.67-.4-.95-.118-.283-.23-.558-.349-.82l-.777-1.788v.003a.485.485 0 0 0-.418-.283H9.622a.46.46 0 0 0-.398.236.525.525 0 0 0-.012.485l2.216 4.386a.515.515 0 0 1 0 .465L9.04 23.276a.548.548 0 0 0 .03.473c.08.142.221.237.377.251h1.44a.488.488 0 0 0 .428-.297l.84-1.955c.119-.294.237-.58.35-.868.112-.288.23-.596.349-.93h.063c.15.334.28.647.403.93l.375.868.9 1.955a.455.455 0 0 0 .413.277h1.53a.46.46 0 0 0 .398-.241.521.521 0 0 0 .008-.485l-2.36-4.568zM24.618 14.298a4.168 4.168 0 0 0-1.621-.979A6.607 6.607 0 0 0 20.885 13h-2.427c-.253 0-.458.221-.458.491v10.015c0 .273.205.494.458.494h2.549a5.843 5.843 0 0 0 2.038-.341 4.123 4.123 0 0 0 1.573-1.047 4.621 4.621 0 0 0 1.016-1.729c.256-.788.38-1.622.365-2.46a7.411 7.411 0 0 0-.365-2.445 4.386 4.386 0 0 0-1.016-1.68zm-1.18 5.81h.002c-.12.41-.32.786-.59 1.1a2.19 2.19 0 0 1-.908.597 3.54 3.54 0 0 1-1.188.183h-.438V15.01h.438c.402-.005.801.049 1.188.17.344.1.656.296.908.563.269.295.47.655.59 1.047a5.48 5.48 0 0 1 .207 1.645c.015.57-.056 1.14-.207 1.685l-.003-.011z"/>
-						</g>
-					</svg>
-					<h3 class="product-links__item__title">
-						Adobe XD
-					</h3>
-					<span class="product-links__item__descr">Coming soon</span>
-				</div>
-				<svg class="product-links__item__arrow" width="12" height="12">
-					<use xlink:href="#icon-arrow-right"/>
-				</svg>
-				<span class="product-links__item__link">Join Waitlist</span>
-			</span>
+						<p class="faq__answer"><a href="mailto:hvoostik@gmail.com">Send me an email</a> and I’ll create a <a
+								href="https://twitter.com/303/status/752229924191162368?ref_src=twsrc%5Etfw">custom version</a> for
+							you for the same price.</p>
+					</li>
+
+					<li class="faq__item">
+						<h3 class="faq__question">What if Sketch creators are going to change the shortcuts?</h3>
+
+						<p class="faq__answer">I’ve got an informal confirmation from Bohemian Coding that there are no plans to
+							change the shortcuts functionality in the near future.</p>
+					</li>
+
+					<li class="faq__item">
+						<h3 class="faq__question">I like the stickers but I’d love to get it for other software besides Sketch and
+							Photoshop.</h3>
+
+						<p class="faq__answer">Sounds interesting! <a href="mailto:hvoostik@gmail.com">Send me an email</a> and I’ll
+							see what I can do.</p>
+					</li>
+				</ul>
+			</div>
 		</div>
-	</div><!-- .product-links -->
+	</section><!-- FAQ -->
+
+	<p class="twitter-wrapper">
+		<a class="twitter" href="https://twitter.com/sketchkeys">
+			<span class="twitter__inner">
+				<svg class="twitter__logo" width="47" height="38"><use xlink:href="#icon-twitter__logo"/></svg>
+
+				<strong class="twitter__handle">@sketchkeys</strong>
+
+				<small class="twitter__description">Learn additional Sketch workflow tips</small>
+
+				<svg class="twitter__arrow" width="31" height="27"><use xlink:href="#icon-twitter__arrow"/></svg>
+			</span>
+		</a>
+	</p>
 
 	<section class="tweets">
 		<h2 class="tweets__title">What the community says</h2>
@@ -436,17 +471,6 @@
 		</div>
 	</section>
 
-	<div class="get">
-		<h2 class="get__title">
-			Get your stickers now. Free shipping worldwide.
-		</h2>
-		<div class="get__btn">
-			<a class="btn" href="#products" data-btn-scroll>Shop Stickers</a>
-		</div>
-		<img class="get__img" src="img/stickers.jpg"
-			 srcset="img/stickers@2x.jpg 2x" alt="Shop Stickers">
-	</div>
-
 	<footer class="footer">
 		<div class="footer__links">
 			<a class="footer__link" href="mailto:hvoostik@gmail.com">Contact via Email</a>
@@ -488,7 +512,6 @@
 <script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script>
 <script src="https://platform.instagram.com/en_US/embeds.js" async defer></script>
 <script src="https://www.affiliatly.com/other_frameworks.js?affiliatly_code=AF-102564"></script>
-
 <script>
 	window.intercomSettings = {
 		app_id: "bblrcd56"
@@ -527,6 +550,5 @@
 		}
 	}
 })()</script>
-
 </body>
 </html>
