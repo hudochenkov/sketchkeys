@@ -904,11 +904,13 @@ input, select, textarea, button {
 		font-weight: bold;
 		font-size: 36px;
 		line-height: 46px;
+		text-align: center;
 
 		@media (--palm) {
 			margin-bottom: 14px;
 			font-size: 24px;
 			line-height: 32px;
+			text-align: left;
 		}
 	}
 	&__list {
@@ -1120,6 +1122,13 @@ input, select, textarea, button {
 			}
 		}
 	}
+	@media (--not-palm) {
+		&__title {
+			margin-bottom: 45px;
+			font-size: 36px;
+			line-height: 46px;
+		}
+	}
 
 }
 .faq {
@@ -1240,6 +1249,7 @@ input, select, textarea, button {
 	padding: 0 30px;
 	border-radius: 5px;
 	background: $link-color--active;
+	text-align: center;
 	color: #fff;
 	font-weight: bold;
 	font-size: 20px;
@@ -1422,6 +1432,24 @@ input, select, textarea, button {
 			}
 		}
 	}
+}
+
+.sticky {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 11px 15px;
+	border-top: 1px solid #ecf0f1;
+	background: #fff;
+
+	@media (--not-palm) {
+		display: none;
+	}
+}
+
+.sticky__btn {
+	width: 100%;
 }
 
 /*Tiny slider*/
