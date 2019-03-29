@@ -67,6 +67,16 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	// Popup
+	var $popupBody = $('[data-popup-body]')
+
+	$('[data-popup-open]').click(function () {
+		$popupBody.addClass('active');
+	})
+	$('[data-popup-close]').click(function () {
+		$popupBody.removeClass('active');
+	})
 });
 
 // Check products and load their scripts
