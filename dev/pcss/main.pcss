@@ -961,8 +961,21 @@ input, select, textarea, button {
 		}
 	}
 	&__tweet {
+		margin-bottom: 20px;
 		padding-right: 13px;
 		padding-top: 4px;
+		display: none;
+
+		&.--mobile {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		@media (min-width: 580px) {
+			&.--mobile {
+				width: 49%;
+			}
+		}
 
 		@media (--not-palm) {
 			display: inline-block;
@@ -988,23 +1001,6 @@ input, select, textarea, button {
 
 	@media (--palm) {
 		margin-bottom: 20px;
-
-		&__tweet {
-			position: relative;
-
-			&.--insta {
-				&:after {
-					content: '';
-					display: block;
-					position: absolute;
-					left: 0;
-					right: 0;
-					top: 0;
-					bottom: 50%;
-					z-index: 100;
-				}
-			}
-		}
 	}
 }
 
@@ -1373,20 +1369,15 @@ input, select, textarea, button {
 		}
 	}
 
-	@media (--lap) {
-		&__link {
-
-		}
-	}
-
 	&.--padded {
 		padding-bottom: 90px;
 	}
 }
 
 .product {
+	overflow: hidden;
+
 	&__gallery {
-		overflow: hidden;
 		opacity: 0;
 		transition: opacity .3s;
 
@@ -1430,8 +1421,7 @@ input, select, textarea, button {
 
 		&__details {
 			flex: 0 0 calc(8.33 * 4)%;
-			padding-left: 30px;
-			padding-right: 30px;
+			padding-left: 5px;
 		}
 	}
 }

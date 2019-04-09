@@ -55,26 +55,6 @@ $(document).ready(function() {
 		});
 	}
 
-	// Social posts gallery
-	var socialSlider = tns({
-		container: '#socials',
-		nav: false,
-		fixedWidth: 294,
-		controls: false,
-		center: true,
-		autoHeight: true,
-		responsive: {
-			768: {
-				disable: true
-			}
-		}
-	});
-
-	$('[data-first-social-item]').on('resize', function(i) {
-		console.log(i)
-	});
-
-
 	// Popup
 	var $popupBody = $('[data-popup-body]')
 
