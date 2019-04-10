@@ -985,9 +985,12 @@ input, select, textarea, button {
 			padding-bottom: 22px;
 		}
 		@media (--desk) {
-			width: 33%;
-			padding-right: 22px;
-			padding-bottom: 22px;
+
+			&.--mobile, & {
+				width: 33%;
+				padding-right: 22px;
+				padding-bottom: 22px;
+			}
 		}
 	}
 
