@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="141" height="222" viewBox="0 0 141 222">
+	<g fill="none" fill-rule="evenodd" stroke-width="1.4">
+		<rect width="139.6" height="220.6" x=".7" y=".7" stroke="#ADBFC3" rx="3.5"/>
+		<rect width="120.055" height="22.411" x="10.472" y="10.504" stroke="#0433FF" rx="3.5"/>
+		<rect width="120.055" height="8.404" x="10.472" y="203.791" stroke="#0433FF" rx="3.5"/>
+		<g stroke="#ADBFC3" transform="translate(9.772 42.019)">
+			<rect width="19.541" height="19.609" x=".7" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="25.829" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="50.957" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="76.086" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="101.215" y=".7" rx="3.5"/>
+		</g>
+		<g stroke="#ADBFC3" transform="translate(9.772 68.63)">
+			<rect width="19.541" height="19.609" x=".7" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="25.829" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="50.957" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="76.086" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="101.215" y=".7" rx="3.5"/>
+		</g>
+		<g stroke="#ADBFC3" transform="translate(9.772 95.943)">
+			<rect width="19.541" height="19.609" x=".7" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="25.829" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="50.957" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="76.086" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="101.215" y=".7" rx="3.5"/>
+		</g>
+		<g stroke="#ADBFC3" transform="translate(9.772 123.256)">
+			<rect width="19.541" height="19.609" x=".7" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="25.829" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="50.957" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="76.086" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="101.215" y=".7" rx="3.5"/>
+		</g>
+		<g stroke="#ADBFC3" transform="translate(9.772 149.868)">
+			<rect width="19.541" height="19.609" x=".7" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="25.829" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="50.957" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="76.086" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="101.215" y=".7" rx="3.5"/>
+		</g>
+		<g stroke="#ADBFC3" transform="translate(9.772 175.079)">
+			<rect width="19.541" height="19.609" x=".7" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="25.829" y=".7" rx="3.5"/>
+			<rect width="19.541" height="19.609" x="50.957" y=".7" rx="3.5"/>
+			<rect width="19.541" height="8.404" x="76.086" y="10.504" rx="3.5"/>
+			<rect width="19.541" height="8.404" x="101.215" y="10.504" rx="3.5"/>
+		</g>
+	</g>
+</svg>
