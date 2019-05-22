@@ -1411,6 +1411,10 @@ input, select, textarea, button {
 		}
 	}
 
+	&.--additional {
+		margin-bottom: 30px;
+	}
+
 	@media (--desk) {
 		display: flex;
 		flex-wrap: nowrap;
@@ -1420,6 +1424,17 @@ input, select, textarea, button {
 		padding-left: 20px;
 		padding-right: 20px;
 		margin-bottom: 26px;
+
+		&.--additional {
+			margin-top: 15px;
+			margin-bottom: 40px;
+
+			.product__gallery, .product__details {
+				padding-bottom: 40px;
+				border-bottom: 1px solid #ecf0f1;
+			}
+
+		}
 
 		&__gallery {
 			flex: 0 0 calc(8.33 * 8)%;
