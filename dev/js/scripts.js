@@ -48,7 +48,6 @@ $(document).ready(function() {
 			slideBy: 'page',
 			autoHeight: true,
 			navAsThumbnails: true,
-			lazyload: true,
 			onInit: function () {
 				$('[data-gallery]').addClass('--active')
 			}
@@ -64,7 +63,6 @@ $(document).ready(function() {
 			slideBy: 'page',
 			autoHeight: true,
 			navAsThumbnails: true,
-			lazyload: true,
 			onInit: function () {
 				$('[data-gallery-2]').addClass('--active')
 			}
