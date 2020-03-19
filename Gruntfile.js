@@ -139,7 +139,7 @@ module.exports = function(grunt) {
 			jslibs: {
 				src: [
 					'node_modules/jquery/dist/jquery.min.js',
-					'node_modules/lory.js/dist/lory.min.js',
+					'node_modules/tiny-slider/dist/min/tiny-slider.js',
 					'<%= project.js.src %>/libs/*.js',
 				],
 				dest: '<%= project.js.build %>/libs.js'

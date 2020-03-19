@@ -35,8 +35,7 @@
   },
   "dependencies": {
     "jquery": "^3.4.1",
-    "lory.js": "^2.2.1",
-    "tiny-slider": "^2.9.1"
+    "tiny-slider": "^2.9.2"
   },
   "scripts": {
     "start": "grunt",
