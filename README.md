@@ -1,6 +1,6 @@
 # How to work
 
-All files for production are compiled with [Grunt]. CSS compiled with [PostCSS]. JavaScript libs and plugins are concatenated to the single file. Images are optimized and SVG compiled to SVG-sprite. HTML just copied.
+All files for production are compiled with [Gulp]. CSS compiled with [PostCSS]. JavaScript libs and plugins are concatenated to the single file. Images are optimized and SVG compiled to SVG-sprite. HTML just copied.
 
 ## Setup
 
@@ -15,16 +15,15 @@ All files for production are compiled with [Grunt]. CSS compiled with [PostCSS].
 
 `root` — configs and dependencies.
 
-`build` — destination directory. There would be generated assets. Shouldn't be in repository.
+`dist` — destination directory. There would be generated assets. Shouldn't be in repository.
 
-`dev` — source directory for everything:
+`src` — source directory for everything:
 
 * dev root — HTML.
 * `img` — images.
 	* `img/svg-sprite` — SVGs for SVG-sprite.
 	* `img/temp` — temporary images. They don't go to production and for demonstration purpose only.
 * `js` — JavaScript.
-	* `js/libs` — JavaScript libraries and plugins, that can't be installed via npm.
 * `pcss` — PostCSS files.
 
 ## Generate assets
@@ -37,10 +36,6 @@ Generate _production_ (minified and optimized) version:
 
 	$ npm run build
 
-## Other tasks
-
-**npm test** — check JavaScript code style in scripts.js and Gruntfile.js.
-
-[Grunt]: https://gruntjs.com/
+[Gulp]: https://gulpjs.com/
 [PostCSS]: https://postcss.org/
 [Node.js]: https://nodejs.org/

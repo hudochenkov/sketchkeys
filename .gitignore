@@ -1,7 +1,2 @@
-# Generated stuff
-build
-.idea
-
-# Dev folder
 node_modules
-.grunt
+dist
