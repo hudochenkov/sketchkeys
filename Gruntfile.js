@@ -147,12 +147,6 @@ module.exports = function(grunt) {
 			},
 		},
 
-		jscs: {
-			default: {
-				src: ['<%= project.js.src %>/scripts.js', 'Gruntfile.js'],
-			},
-		},
-
 		svgstore: {
 			options: {
 				prefix: 'icon-',
@@ -258,7 +252,7 @@ module.exports = function(grunt) {
 		'browserSync',
 		'watch',
 	]);
-	grunt.registerTask('test', ['jscs']);
+
 	grunt.registerTask('build', [
 		'clean',
 		'copy',
