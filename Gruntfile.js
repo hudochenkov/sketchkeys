@@ -1,17 +1,16 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
-
 		project: {
 			src: 'dev',
 			build: 'build',
 			css: {
 				src: 'dev/pcss/main.pcss',
 				build: 'build/main.css',
-				dir: 'dev/pcss/'
+				dir: 'dev/pcss/',
 			},
 			js: {
 				src: 'dev/js',
-				build: 'build/js'
+				build: 'build/js',
 			},
 			img: {
 				src: 'dev/img',
@@ -19,9 +18,9 @@ module.exports = function(grunt) {
 				allExtensions: '**/*.{png,jpg,gif,svg}',
 				svgSprite: {
 					src: 'svg-sprite/*.svg',
-					build: 'build/img/sprite.svg'
-				}
-			}
+					build: 'build/img/sprite.svg',
+				},
+			},
 		},
 		pkg: grunt.file.readJSON('package.json'),
 
@@ -35,58 +34,57 @@ module.exports = function(grunt) {
 					require('postcss-simple-vars')(),
 					require('postcss-property-lookup')(),
 					require('postcss-assets')({
-						basePath: 'dev'
+						basePath: 'dev',
 					}),
 					require('postcss-inline-svg')({
-						paths: ['dev']
+						paths: ['dev'],
 					}),
 					require('postcss-calc')(),
 					require('postcss-hexrgba')(),
 					require('postcss-custom-media')(),
 					require('postcss-media-minmax')(),
 					require('lost')(),
-					require('autoprefixer')()
-				]
+					require('autoprefixer')(),
+				],
 			},
 			default: {
 				src: '<%= project.css.src %>',
-				dest: '<%= project.css.build %>'
+				dest: '<%= project.css.build %>',
 			},
 			minify: {
 				options: {
 					map: false,
 					processors: [
 						require('cssnano')({
-							preset: 'default'
-						})
-					]
+							preset: 'default',
+						}),
+					],
 				},
-				src: '<%= project.css.build %>'
-			}
+				src: '<%= project.css.build %>',
+			},
 		},
 
 		usebanner: {
 			default: {
 				options: {
 					position: 'top',
-					banner: '/*\n' +
-							'Author:     Aleks Hudochenkov (hudochenkov.com)\n' +
-							'Version:    <%= grunt.template.today("dd.mm.yyyy") %>\n' +
-							'-----------------------------------------------------------------------------*/\n'
+					banner:
+						'/*\n' +
+						'Author:     Aleks Hudochenkov (hudochenkov.com)\n' +
+						'Version:    <%= grunt.template.today("dd.mm.yyyy") %>\n' +
+						'-----------------------------------------------------------------------------*/\n',
 				},
 				files: {
-					src: ['<%= project.css.build %>']
-				}
-			}
+					src: ['<%= project.css.build %>'],
+				},
+			},
 		},
 
 		clean: {
-			build: [
-				'<%= project.build %>'
-			],
+			build: ['<%= project.build %>'],
 			options: {
-				force: true
-			}
+				force: true,
+			},
 		},
 
 		copy: {
@@ -95,10 +93,13 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						cwd: '<%= project.img.src %>',
-						src: ['<%= project.img.allExtensions %>', '!<%= project.img.svgSprite.src %>'],
-						dest: '<%= project.img.build %>'
-					}
-				]
+						src: [
+							'<%= project.img.allExtensions %>',
+							'!<%= project.img.svgSprite.src %>',
+						],
+						dest: '<%= project.img.build %>',
+					},
+				],
 			},
 			html: {
 				files: [
@@ -106,9 +107,9 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: '<%= project.src %>',
 						src: ['*.html'],
-						dest: '<%= project.build %>'
-					}
-				]
+						dest: '<%= project.build %>',
+					},
+				],
 			},
 			js: {
 				files: [
@@ -116,9 +117,9 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: '<%= project.js.src %>',
 						src: ['*.js'],
-						dest: '<%= project.js.build %>'
-					}
-				]
+						dest: '<%= project.js.build %>',
+					},
+				],
 			},
 			other: {
 				files: [
@@ -126,15 +127,15 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: '<%= project.src %>',
 						src: ['CNAME', 'favicon.ico'],
-						dest: '<%= project.build %>'
-					}
-				]
-			}
+						dest: '<%= project.build %>',
+					},
+				],
+			},
 		},
 
 		concat: {
 			options: {
-				separator: '\n'
+				separator: '\n',
 			},
 			jslibs: {
 				src: [
@@ -142,40 +143,45 @@ module.exports = function(grunt) {
 					'node_modules/tiny-slider/dist/min/tiny-slider.js',
 					'<%= project.js.src %>/libs/*.js',
 				],
-				dest: '<%= project.js.build %>/libs.js'
-			}
+				dest: '<%= project.js.build %>/libs.js',
+			},
 		},
 
 		jscs: {
 			default: {
-				src: ['<%= project.js.src %>/scripts.js', 'Gruntfile.js']
-			}
+				src: ['<%= project.js.src %>/scripts.js', 'Gruntfile.js'],
+			},
 		},
 
 		svgstore: {
 			options: {
 				prefix: 'icon-',
 				svg: {
-					style: 'position: absolute; width: 0; height: 0; visibility: hidden;'
-				}
+					style: 'position: absolute; width: 0; height: 0; visibility: hidden;',
+				},
 			},
 			dev: {
 				files: {
-					'<%= project.img.svgSprite.build %>': ['<%= project.img.src %>/<%= project.img.svgSprite.src %>']
+					'<%= project.img.svgSprite.build %>': [
+						'<%= project.img.src %>/<%= project.img.svgSprite.src %>',
+					],
 				},
 				options: {
 					formatting: {
 						indent_char: '	',
-						indent_size: 1
+						indent_size: 1,
 					},
-					includedemo: '<!doctype html><html><head><style>body{background: #eee;}svg{width:50px; height:50px; fill:black;}</style><head><body>\n{{{svg}}}\n\n{{#each icons}}<svg class="svg-icon"><use xlink:href="#{{name}}" /></svg>\n{{/each}}\n\n</body></html>\n'
-				}
+					includedemo:
+						'<!doctype html><html><head><style>body{background: #eee;}svg{width:50px; height:50px; fill:black;}</style><head><body>\n{{{svg}}}\n\n{{#each icons}}<svg class="svg-icon"><use xlink:href="#{{name}}" /></svg>\n{{/each}}\n\n</body></html>\n',
+				},
 			},
 			build: {
 				files: {
-					'<%= project.img.svgSprite.build %>': ['<%= project.img.src %>/<%= project.img.svgSprite.src %>']
-				}
-			}
+					'<%= project.img.svgSprite.build %>': [
+						'<%= project.img.src %>/<%= project.img.svgSprite.src %>',
+					],
+				},
+			},
 		},
 
 		browserSync: {
@@ -184,65 +190,82 @@ module.exports = function(grunt) {
 					'<%= project.build %>/*.html',
 					'<%= project.js.build %>/*.js',
 					'<%= project.img.build %>/**/*.{png,jpg,gif,svg}',
-				]
+				],
 			},
 			options: {
 				server: {
-					baseDir: '<%= project.build %>'
+					baseDir: '<%= project.build %>',
 				},
 				watchTask: true,
 				notify: false,
 				online: false,
-				ghostMode: false
-			}
+				ghostMode: false,
+			},
 		},
 
 		bsReload: {
 			css: {
-				reload: '<%= project.css.build %>'
+				reload: '<%= project.css.build %>',
 			},
 			all: {
-				reload: true
-			}
+				reload: true,
+			},
 		},
 
 		watch: {
 			options: {
-				spawn: false
+				spawn: false,
 			},
 			pcss: {
 				files: ['<%= project.css.dir %>/*.pcss'],
 				tasks: ['postcss:default', 'bsReload:css'],
 			},
 			img: {
-				files: ['<%= project.img.src %>/<%= project.img.allExtensions %>', '!<%= project.img.src %>/<%= project.img.svgSprite.src %>'],
-				tasks: ['newer:copy:images', 'bsReload:all']
+				files: [
+					'<%= project.img.src %>/<%= project.img.allExtensions %>',
+					'!<%= project.img.src %>/<%= project.img.svgSprite.src %>',
+				],
+				tasks: ['newer:copy:images', 'bsReload:all'],
 			},
 			svgSprite: {
 				files: ['<%= project.img.src %>/<%= project.img.svgSprite.src %>'],
-				tasks: ['svgstore:dev', 'bsReload:all']
+				tasks: ['svgstore:dev', 'bsReload:all'],
 			},
 			jslibs: {
 				files: ['<%= project.js.src %>/libs/*.js'],
-				tasks: ['concat:jslibs']
+				tasks: ['concat:jslibs'],
 			},
 			js: {
 				files: ['<%= project.js.src %>/*.js'],
-				tasks: ['copy:js']
+				tasks: ['copy:js'],
 			},
 			html: {
 				files: ['<%= project.src %>/*.html'],
-				tasks: ['newer:copy:html']
+				tasks: ['newer:copy:html'],
 			},
-		}
-
+		},
 	});
 
 	require('jit-grunt')(grunt, {
-		usebanner: 'grunt-banner'
+		usebanner: 'grunt-banner',
 	});
 
-	grunt.registerTask('default', ['newer:copy', 'svgstore:dev', 'concat:jslibs', 'postcss:default', 'browserSync', 'watch']);
+	grunt.registerTask('default', [
+		'newer:copy',
+		'svgstore:dev',
+		'concat:jslibs',
+		'postcss:default',
+		'browserSync',
+		'watch',
+	]);
 	grunt.registerTask('test', ['jscs']);
-	grunt.registerTask('build', ['clean', 'copy', 'svgstore:build', 'concat:jslibs', 'postcss:default', 'postcss:minify', 'usebanner']);
+	grunt.registerTask('build', [
+		'clean',
+		'copy',
+		'svgstore:build',
+		'concat:jslibs',
+		'postcss:default',
+		'postcss:minify',
+		'usebanner',
+	]);
 };
