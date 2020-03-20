@@ -9,13 +9,9 @@
 {% set headerHasBorder = true %}
 
 {% block content %}
-<nav class="breadcrumbs inner">
-	<a href="/" class="breadcrumbs__link">All Products</a>
-	<svg class="breadcrumbs__arrow" xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10">
-		<path fill="#7F8C8D" fill-rule="evenodd" d="M6.346 4.703a.773.773 0 0 1-.227.568L2.267 9.12a.783.783 0 0 1-1.098 0 .775.775 0 0 1-.001-1.099l3.32-3.32-3.32-3.319A.775.775 0 0 1 1.169.285.783.783 0 0 1 2.267.284l3.852 3.85a.773.773 0 0 1 .227.569z"/>
-	</svg>
-	<span class="breadcrumbs__current">Adobe XD</span>
-</nav>
+
+{% from "blocks/breadcrumbs.html" import breadcrumbs %}
+{{ breadcrumbs('Adobe XD') }}
 
 <div class="product">
 	<section class="product__gallery" data-gallery>
