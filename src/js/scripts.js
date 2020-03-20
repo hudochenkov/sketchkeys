@@ -61,7 +61,7 @@ $(document).ready(function() {
 			navContainer: '#gallery-thumbs',
 			controlsContainer: '#gallery-btns',
 			slideBy: 'page',
-			autoHeight: true,
+			autoHeight: false,
 			navAsThumbnails: true,
 			preventScrollOnTouch: 'auto',
 			onInit: function() {
@@ -77,7 +77,7 @@ $(document).ready(function() {
 			navContainer: '#gallery-thumbs-2',
 			controlsContainer: '#gallery-btns-2',
 			slideBy: 'page',
-			autoHeight: true,
+			autoHeight: false,
 			navAsThumbnails: true,
 			preventScrollOnTouch: 'auto',
 			onInit: function() {
