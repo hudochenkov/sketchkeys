@@ -957,6 +957,8 @@ input, select, textarea, button {
 	}
 }
 .tweets__tweet {
+	min-width: 0;
+
 	@media (--palm) {
 		&:nth-child(n+5) {
 			display: none;
@@ -969,6 +971,11 @@ input, select, textarea, button {
 }
 .instagram-media {
 	min-width: 0 !important;
+	width: auto !important;
+	max-width: 100% !important;
+}
+.instagram-media-rendered {
+	width: 100% !important;
 }
 
 .product-links {
