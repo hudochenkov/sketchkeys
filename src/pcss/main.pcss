@@ -924,88 +924,51 @@ input, select, textarea, button {
 	&__link {
 	}
 }
+
 .tweets {
-	&__i {
-		margin-right: -13px;
-	}
-
-	&__title {
-		margin-bottom: 44px;
-		font-weight: bold;
-		font-size: 36px;
-		line-height: 46px;
-		text-align: center;
-
-		&.--left {
-			text-align: left;
-		}
-
-		@media (--palm) {
-			margin-bottom: 11px;
-			font-size: 24px;
-			line-height: 32px;
-			text-align: left;
-		}
-	}
-	&__list {
-		margin-bottom: 40px;
-
-		@media (--not-palm) {
-			margin-bottom: 80px;
-		}
-	}
-	&__tweet {
-		margin-bottom: 20px;
-		padding-right: 13px;
-		padding-top: 4px;
-		display: none;
-
-		&.--mobile {
-			width: 100%;
-			display: inline-block;
-			vertical-align: top;
-		}
-
-		@media (min-width: 580px) {
-			&.--mobile {
-				width: 49%;
-			}
-		}
-
-		@media (--not-palm) {
-			display: inline-block;
-			vertical-align: top;
-			width: 49%;
-			padding-right: 22px;
-			padding-bottom: 22px;
-		}
-		@media (--desk) {
-
-			&.--mobile, & {
-				width: 33%;
-				padding-right: 22px;
-				padding-bottom: 22px;
-			}
-		}
-	}
-
-	@media (--not-palm) {
-		margin-right: -22px;
-	}
-
-	.twitter-tweet-rendered {
-		margin: 0 !important;
-	}
+	margin-bottom: 80px;
 
 	@media (--palm) {
-		margin-bottom: 20px;
-		overflow: hidden;
+		margin-bottom: 40px;
 	}
 }
 
-.instagram-media, .twitter-tweet {
-	min-width: 260px !important;
+.tweets__title {
+	margin-bottom: 44px;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 46px;
+	text-align: center;
+
+	@media (--palm) {
+		margin-bottom: 11px;
+		font-size: 24px;
+		line-height: 32px;
+		text-align: left;
+	}
+}
+.tweets__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: $gutter-size;
+
+	@media (--portable) {
+		grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	}
+}
+.tweets__tweet {
+	@media (--palm) {
+		&:nth-child(n+5) {
+			display: none;
+		}
+	}
+}
+.twitter-tweet {
+	width: auto !important;
 	margin: 0 !important;
+}
+.instagram-media {
+	min-width: 0 !important;
 }
 
 .product-links {
